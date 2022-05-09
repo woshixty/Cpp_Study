@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(CppDesignPatterns)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(CppDesignPatterns main.cpp)
+add_executable(factory factory/Product.cpp factory/Product.h factory/Factory.cpp factory/Factory.h factory/main.cpp)

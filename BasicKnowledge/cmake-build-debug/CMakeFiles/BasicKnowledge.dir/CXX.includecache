@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/Test.cpp
+Test.h
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/Test.h
+iostream
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/Test.h
+vector
+-
+iostream
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/main.cpp
+iostream
+-
+vector
+-
+Test.h
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/Test.h
+
