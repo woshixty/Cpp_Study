@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-bu
 
 # The main recursive "all" target.
 all: CMakeFiles/factory.dir/all
+all: CMakeFiles/builder.dir/all
 all: CMakeFiles/CppDesignPatterns.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/factory.dir/clean
+clean: CMakeFiles/builder.dir/clean
 clean: CMakeFiles/CppDesignPatterns.dir/clean
 .PHONY : clean
 
@@ -83,7 +85,7 @@ clean: CMakeFiles/CppDesignPatterns.dir/clean
 CMakeFiles/factory.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6 "Built target factory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11 "Built target factory"
 .PHONY : CMakeFiles/factory.dir/all
 
 # Build rule for subdir invocation for target.
@@ -101,6 +103,32 @@ factory: CMakeFiles/factory.dir/rule
 CMakeFiles/factory.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/clean
 .PHONY : CMakeFiles/factory.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/builder.dir
+
+# All Build rule for target.
+CMakeFiles/builder.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7 "Built target builder"
+.PHONY : CMakeFiles/builder.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/builder.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/builder.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/builder.dir/rule
+
+# Convenience name for target.
+builder: CMakeFiles/builder.dir/rule
+.PHONY : builder
+
+# clean rule for target.
+CMakeFiles/builder.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/clean
+.PHONY : CMakeFiles/builder.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/CppDesignPatterns.dir

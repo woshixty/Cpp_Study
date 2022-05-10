@@ -179,6 +179,30 @@ chapter11/mytime0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter11/mytime0.cpp.s
 .PHONY : chapter11/mytime0.cpp.s
 
+chapter13/tabtenn0.o: chapter13/tabtenn0.cpp.o
+.PHONY : chapter13/tabtenn0.o
+
+# target to build an object file
+chapter13/tabtenn0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.o
+.PHONY : chapter13/tabtenn0.cpp.o
+
+chapter13/tabtenn0.i: chapter13/tabtenn0.cpp.i
+.PHONY : chapter13/tabtenn0.i
+
+# target to preprocess a source file
+chapter13/tabtenn0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.i
+.PHONY : chapter13/tabtenn0.cpp.i
+
+chapter13/tabtenn0.s: chapter13/tabtenn0.cpp.s
+.PHONY : chapter13/tabtenn0.s
+
+# target to generate assembly for a file
+chapter13/tabtenn0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.s
+.PHONY : chapter13/tabtenn0.cpp.s
+
 chapter16/16-1.o: chapter16/16-1.cpp.o
 .PHONY : chapter16/16-1.o
 
@@ -265,6 +289,9 @@ help:
 	@echo "... chapter11/mytime0.o"
 	@echo "... chapter11/mytime0.i"
 	@echo "... chapter11/mytime0.s"
+	@echo "... chapter13/tabtenn0.o"
+	@echo "... chapter13/tabtenn0.i"
+	@echo "... chapter13/tabtenn0.s"
 	@echo "... chapter16/16-1.o"
 	@echo "... chapter16/16-1.i"
 	@echo "... chapter16/16-1.s"

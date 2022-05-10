@@ -130,6 +130,19 @@ factory/fast:
 .PHONY : factory/fast
 
 #=============================================================================
+# Target rules for targets named builder
+
+# Build rule for target.
+builder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 builder
+.PHONY : builder
+
+# fast build rule for target.
+builder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
+.PHONY : builder/fast
+
+#=============================================================================
 # Target rules for targets named CppDesignPatterns
 
 # Build rule for target.
@@ -141,6 +154,102 @@ CppDesignPatterns: cmake_check_build_system
 CppDesignPatterns/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/build
 .PHONY : CppDesignPatterns/fast
+
+builder/Builder.o: builder/Builder.cpp.o
+.PHONY : builder/Builder.o
+
+# target to build an object file
+builder/Builder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Builder.cpp.o
+.PHONY : builder/Builder.cpp.o
+
+builder/Builder.i: builder/Builder.cpp.i
+.PHONY : builder/Builder.i
+
+# target to preprocess a source file
+builder/Builder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Builder.cpp.i
+.PHONY : builder/Builder.cpp.i
+
+builder/Builder.s: builder/Builder.cpp.s
+.PHONY : builder/Builder.s
+
+# target to generate assembly for a file
+builder/Builder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Builder.cpp.s
+.PHONY : builder/Builder.cpp.s
+
+builder/Director.o: builder/Director.cpp.o
+.PHONY : builder/Director.o
+
+# target to build an object file
+builder/Director.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Director.cpp.o
+.PHONY : builder/Director.cpp.o
+
+builder/Director.i: builder/Director.cpp.i
+.PHONY : builder/Director.i
+
+# target to preprocess a source file
+builder/Director.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Director.cpp.i
+.PHONY : builder/Director.cpp.i
+
+builder/Director.s: builder/Director.cpp.s
+.PHONY : builder/Director.s
+
+# target to generate assembly for a file
+builder/Director.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Director.cpp.s
+.PHONY : builder/Director.cpp.s
+
+builder/Product.o: builder/Product.cpp.o
+.PHONY : builder/Product.o
+
+# target to build an object file
+builder/Product.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Product.cpp.o
+.PHONY : builder/Product.cpp.o
+
+builder/Product.i: builder/Product.cpp.i
+.PHONY : builder/Product.i
+
+# target to preprocess a source file
+builder/Product.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Product.cpp.i
+.PHONY : builder/Product.cpp.i
+
+builder/Product.s: builder/Product.cpp.s
+.PHONY : builder/Product.s
+
+# target to generate assembly for a file
+builder/Product.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/Product.cpp.s
+.PHONY : builder/Product.cpp.s
+
+builder/main.o: builder/main.cpp.o
+.PHONY : builder/main.o
+
+# target to build an object file
+builder/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/main.cpp.o
+.PHONY : builder/main.cpp.o
+
+builder/main.i: builder/main.cpp.i
+.PHONY : builder/main.i
+
+# target to preprocess a source file
+builder/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/main.cpp.i
+.PHONY : builder/main.cpp.i
+
+builder/main.s: builder/main.cpp.s
+.PHONY : builder/main.s
+
+# target to generate assembly for a file
+builder/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/builder/main.cpp.s
+.PHONY : builder/main.cpp.s
 
 factory/Factory.o: factory/Factory.cpp.o
 .PHONY : factory/Factory.o
@@ -247,7 +356,20 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppDesignPatterns"
+	@echo "... builder"
 	@echo "... factory"
+	@echo "... builder/Builder.o"
+	@echo "... builder/Builder.i"
+	@echo "... builder/Builder.s"
+	@echo "... builder/Director.o"
+	@echo "... builder/Director.i"
+	@echo "... builder/Director.s"
+	@echo "... builder/Product.o"
+	@echo "... builder/Product.i"
+	@echo "... builder/Product.s"
+	@echo "... builder/main.o"
+	@echo "... builder/main.i"
+	@echo "... builder/main.s"
 	@echo "... factory/Factory.o"
 	@echo "... factory/Factory.i"
 	@echo "... factory/Factory.s"
