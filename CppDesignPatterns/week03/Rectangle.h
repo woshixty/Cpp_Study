@@ -8,13 +8,12 @@
 
 class Rectangle : public Shape{
 private:
-    double sideA, sideB, sideC;
+    double length, width;
 public:
     Rectangle();
-    // 使用工厂模式创建对象时判断三边是否正常
-    Rectangle(double a, double b, double c);
+    // 使用工厂模式创建对象时判断边是否正常
+    Rectangle(double l, double w);
     ~Rectangle();
-    void setSides(double a, double b, double c);
     double perimeter() const override;
     double area() const override;
     ShapeType type() const override;
