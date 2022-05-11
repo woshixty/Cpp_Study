@@ -1,0 +1,14 @@
+//
+// Created by 谢庭宇 on 2022/5/11.
+// 复合形状
+
+#ifndef CPPDESIGNPATTERNS_COMPOUNDSHAPE_H
+#define CPPDESIGNPATTERNS_COMPOUNDSHAPE_H
+
+
+class Compoundshape {
+
+};
+
+
+#endif //CPPDESIGNPATTERNS_COMPOUNDSHAPE_H
