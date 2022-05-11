@@ -4,12 +4,18 @@
 
 #include "Shape.h"
 #include "Rectangle.h"
+#include "Square.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
     Shape* shape = new Rectangle(3,4,5);
+    cout << shape->area() << endl;
+    cout << shape->perimeter() << endl;
+    cout << shape->type() << endl;
+
+    shape = new Square(3);
     cout << shape->area() << endl;
     cout << shape->perimeter() << endl;
     cout << shape->type() << endl;

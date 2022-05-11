@@ -5,9 +5,19 @@
 #ifndef CPPDESIGNPATTERNS_SQUARE_H
 #define CPPDESIGNPATTERNS_SQUARE_H
 
+#include "Shape.h"
 
-class Square {
-
+class Square : public Shape{
+private:
+    double side;
+public:
+    Square();
+    // 使用工厂模式创建对象时判断边是否为负数
+    Square(double s);
+    ~Square();
+    double perimeter() const override;
+    double area() const override;
+    ShapeType type() const override;
 };
 
 
