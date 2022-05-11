@@ -3,10 +3,6 @@
 //
 
 #include "Rectangle.h"
-#include <iostream>
-#include <math.h>
-
-using namespace std;
 
 Rectangle::Rectangle() : length(0.0), width(0.0) {}
 
