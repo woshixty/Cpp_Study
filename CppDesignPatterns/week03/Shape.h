@@ -5,7 +5,7 @@
 #ifndef CPPDESIGNPATTERNS_SHAPE_H
 #define CPPDESIGNPATTERNS_SHAPE_H
 
-enum ShapeType {triangle, square, rectangle, trapezium, roundd, compoundshape};
+enum ShapeType {triangle, square, rectangle, trapezium, circle, compoundshape};
 
 void judgeType(ShapeType type);
 

@@ -6,6 +6,7 @@
 #include "Rectangle.h"
 #include "Triangle.h"
 #include "Trapezium.h"
+#include "Round.h"
 #include "Square.h"
 #include <iostream>
 
@@ -17,22 +18,33 @@ int main() {
     cout << shape->area() << endl;
     cout << shape->perimeter() << endl;
     cout << shape->type() << endl;
+    cout << "--------------------------------" << endl;
 
     cout << "Square" << endl;
     shape = new Square(3);
     cout << shape->area() << endl;
     cout << shape->perimeter() << endl;
     cout << shape->type() << endl;
+    cout << "--------------------------------" << endl;
 
     cout << "Triangle" << endl;
     shape = new Triangle(3, 4, 5);
     cout << shape->area() << endl;
     cout << shape->perimeter() << endl;
     cout << shape->type() << endl;
+    cout << "--------------------------------" << endl;
 
     cout << "Trapezium" << endl;
     shape = new Trapezium(3, 11, 5, 5);
     cout << shape->area() << endl;
     cout << shape->perimeter() << endl;
     cout << shape->type() << endl;
+    cout << "--------------------------------" << endl;
+
+    cout << "Round" << endl;
+    shape = new Round(3);
+    cout << shape->area() << endl;
+    cout << shape->perimeter() << endl;
+    cout << shape->type() << endl;
+    cout << "--------------------------------" << endl;
 }
