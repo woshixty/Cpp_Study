@@ -14,9 +14,13 @@
 class ShapeFactory {
 public:
     Triangle *getTriangle(double a, double b, double c);
+
     Square *getSquare(double side);
+
     Rectangle *getRectangle(double l, double w);
+
     Trapezium *getTrapezium(double t, double b, double l, double r);
+
     Round *getRound(double r);
 };
 

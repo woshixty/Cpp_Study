@@ -16,12 +16,12 @@ Trapezium::Trapezium(Shape *shape) {
     if (shape != nullptr && shape->type() == trapezium) {
         Trapezium *p = dynamic_cast<Trapezium *>(shape);
         top = p->top;
-        bottom= p->bottom;
+        bottom = p->bottom;
         left = p->left;
         right = p->right;
     } else {
         top = 0;
-        bottom= 0;
+        bottom = 0;
         left = 0;
         right = 0;
         cout << "类型不可用于构造Trapezium" << endl;

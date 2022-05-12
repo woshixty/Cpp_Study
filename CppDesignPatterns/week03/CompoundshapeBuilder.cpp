@@ -10,7 +10,7 @@ CompoundshapeBuilder::CompoundshapeBuilder() {
 }
 
 CompoundshapeBuilder::~CompoundshapeBuilder() {
-    for (auto iter = shapes.begin(); iter != shapes.end(); ) {
+    for (auto iter = shapes.begin(); iter != shapes.end();) {
         Shape *temp = *iter;
         iter++;
         delete temp;
@@ -23,7 +23,7 @@ CompoundshapeBuilder *CompoundshapeBuilder::build(Shape *buildPara) {
 }
 
 Shape *CompoundshapeBuilder::getShape() {
-    Compoundshape * shape = new Compoundshape();
+    Compoundshape *shape = new Compoundshape();
     for (auto iter = shapes.begin(); iter != shapes.end(); iter++) {
         shape->addShape(*iter);
     }

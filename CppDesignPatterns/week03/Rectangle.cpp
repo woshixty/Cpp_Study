@@ -12,7 +12,7 @@ Rectangle::Rectangle() : length(0.0), width(0.0) {}
 Rectangle::Rectangle(double l, double w) : length(l), width(w) {}
 
 Rectangle::Rectangle(Shape *shape) {
-    if(shape != nullptr && shape->type() == rectangle) {
+    if (shape != nullptr && shape->type() == rectangle) {
         Rectangle *p = dynamic_cast<Rectangle *>(shape);
         length = p->length;
         width = p->width;

@@ -33,7 +33,7 @@ ShapeType Compoundshape::type() const {
 }
 
 Compoundshape::~Compoundshape() {
-    for (auto iter = shapes.begin(); iter != shapes.end(); ) {
+    for (auto iter = shapes.begin(); iter != shapes.end();) {
         Shape *temp = *iter;
         iter++;
         delete temp;
