@@ -14,6 +14,7 @@ public:
     Triangle();
     // 使用工厂模式创建对象时判断三边是否正常
     Triangle(double a, double b, double c);
+    Triangle(Shape *shape);
     ~Triangle();
     void setSides(double a, double b, double c);
     double perimeter() const override;

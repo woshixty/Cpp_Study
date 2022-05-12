@@ -3,10 +3,23 @@
 //
 
 #include "Square.h"
+#include <iostream>
 
-Square::Square() : side(0.0){}
+using namespace std;
+
+Square::Square() : side(0.0) {}
 
 Square::Square(double s) : side(s) {}
+
+Square::Square(Shape *shape) {
+    if (shape != nullptr && shape->type() == square) {
+        Square *p = dynamic_cast<Square *>(shape);
+        side = p->side;
+    } else {
+        side = 0.0;
+        cout << "类型不可用于构造Square" << endl;
+    }
+}
 
 Square::~Square() {}
 

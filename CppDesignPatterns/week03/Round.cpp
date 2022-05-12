@@ -3,10 +3,23 @@
 //
 
 #include "Round.h"
+#include <iostream>
 
-Round::Round() : radius(0.0){}
+using namespace std;
+
+Round::Round() : radius(0.0) {}
 
 Round::Round(double r) : radius(r) {}
+
+Round::Round(Shape *shape) {
+    if (shape != nullptr && shape->type() == circle) {
+        Round *p = dynamic_cast<Round *>(shape);
+        radius = p->radius;
+    } else {
+        radius = 0.0;
+        cout << "类型不可用于构造Round" << endl;
+    }
+}
 
 Round::~Round() {}
 

@@ -12,6 +12,20 @@ Triangle::Triangle() : sideA(0.0), sideB(0.0), sideC(0.0) {}
 
 Triangle::Triangle(double a, double b, double c) : sideA(a), sideB(b), sideC(c) {}
 
+Triangle::Triangle(Shape *shape) {
+    if (shape != nullptr && shape->type() == triangle) {
+        Triangle *p = dynamic_cast<Triangle *>(shape);
+        sideA = p->sideA;
+        sideB = p->sideB;
+        sideC = p->sideC;
+    } else {
+        sideA = 0;
+        sideB = 0;
+        sideC = 0;
+        cout << "类型不可用于构造Triangle" << endl;
+    }
+}
+
 Triangle::~Triangle() {}
 
 void Triangle::setSides(double a, double b, double c) {

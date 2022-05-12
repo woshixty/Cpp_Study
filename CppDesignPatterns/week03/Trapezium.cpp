@@ -4,10 +4,29 @@
 
 #include "Trapezium.h"
 #include <math.h>
+#include <iostream>
+
+using namespace std;
 
 Trapezium::Trapezium() : top(0.0), bottom(0.0), left(0.0), right(0.0) {}
 
 Trapezium::Trapezium(double t, double b, double l, double r) : top(t), bottom(b), left(l), right(r) {}
+
+Trapezium::Trapezium(Shape *shape) {
+    if (shape != nullptr && shape->type() == trapezium) {
+        Trapezium *p = dynamic_cast<Trapezium *>(shape);
+        top = p->top;
+        bottom= p->bottom;
+        left = p->left;
+        right = p->right;
+    } else {
+        top = 0;
+        bottom= 0;
+        left = 0;
+        right = 0;
+        cout << "类型不可用于构造Trapezium" << endl;
+    }
+}
 
 Trapezium::~Trapezium() {}
 
