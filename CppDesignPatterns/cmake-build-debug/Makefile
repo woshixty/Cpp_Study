@@ -384,6 +384,30 @@ week03/Compoundshape.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Compoundshape.cpp.s
 .PHONY : week03/Compoundshape.cpp.s
 
+week03/CompoundshapeBuilder.o: week03/CompoundshapeBuilder.cpp.o
+.PHONY : week03/CompoundshapeBuilder.o
+
+# target to build an object file
+week03/CompoundshapeBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.o
+.PHONY : week03/CompoundshapeBuilder.cpp.o
+
+week03/CompoundshapeBuilder.i: week03/CompoundshapeBuilder.cpp.i
+.PHONY : week03/CompoundshapeBuilder.i
+
+# target to preprocess a source file
+week03/CompoundshapeBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.i
+.PHONY : week03/CompoundshapeBuilder.cpp.i
+
+week03/CompoundshapeBuilder.s: week03/CompoundshapeBuilder.cpp.s
+.PHONY : week03/CompoundshapeBuilder.s
+
+# target to generate assembly for a file
+week03/CompoundshapeBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.s
+.PHONY : week03/CompoundshapeBuilder.cpp.s
+
 week03/Rectangle.o: week03/Rectangle.cpp.o
 .PHONY : week03/Rectangle.o
 
@@ -431,30 +455,6 @@ week03/Round.s: week03/Round.cpp.s
 week03/Round.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Round.cpp.s
 .PHONY : week03/Round.cpp.s
-
-week03/Shape.o: week03/Shape.cpp.o
-.PHONY : week03/Shape.o
-
-# target to build an object file
-week03/Shape.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Shape.cpp.o
-.PHONY : week03/Shape.cpp.o
-
-week03/Shape.i: week03/Shape.cpp.i
-.PHONY : week03/Shape.i
-
-# target to preprocess a source file
-week03/Shape.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Shape.cpp.i
-.PHONY : week03/Shape.cpp.i
-
-week03/Shape.s: week03/Shape.cpp.s
-.PHONY : week03/Shape.s
-
-# target to generate assembly for a file
-week03/Shape.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Shape.cpp.s
-.PHONY : week03/Shape.cpp.s
 
 week03/Square.o: week03/Square.cpp.o
 .PHONY : week03/Square.o
@@ -591,15 +591,15 @@ help:
 	@echo "... week03/Compoundshape.o"
 	@echo "... week03/Compoundshape.i"
 	@echo "... week03/Compoundshape.s"
+	@echo "... week03/CompoundshapeBuilder.o"
+	@echo "... week03/CompoundshapeBuilder.i"
+	@echo "... week03/CompoundshapeBuilder.s"
 	@echo "... week03/Rectangle.o"
 	@echo "... week03/Rectangle.i"
 	@echo "... week03/Rectangle.s"
 	@echo "... week03/Round.o"
 	@echo "... week03/Round.i"
 	@echo "... week03/Round.s"
-	@echo "... week03/Shape.o"
-	@echo "... week03/Shape.i"
-	@echo "... week03/Shape.s"
 	@echo "... week03/Square.o"
 	@echo "... week03/Square.i"
 	@echo "... week03/Square.s"

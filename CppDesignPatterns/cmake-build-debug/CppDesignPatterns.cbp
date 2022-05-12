@@ -243,6 +243,12 @@
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Compoundshape.h">
 			<Option target="week03"/>
 		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/CompoundshapeBuilder.cpp">
+			<Option target="week03"/>
+		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/CompoundshapeBuilder.h">
+			<Option target="week03"/>
+		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Rectangle.cpp">
 			<Option target="week03"/>
 		</Unit>
@@ -253,9 +259,6 @@
 			<Option target="week03"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Round.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Shape.cpp">
 			<Option target="week03"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Shape.h">

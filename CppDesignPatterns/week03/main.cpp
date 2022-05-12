@@ -9,8 +9,8 @@
 #include "Round.h"
 #include "Square.h"
 #include "Compoundshape.h"
+#include "CompoundshapeBuilder.h"
 #include <iostream>
-#include <stdarg.h>
 
 using namespace std;
 
@@ -58,5 +58,13 @@ int main() {
     cout << compoundshape->area() << endl;
     cout << compoundshape->perimeter() << endl;
     cout << compoundshape->type() << endl;
+    cout << "--------------------------------" << endl;
+
+    cout << "CompoundshapeBuilder" << endl;
+    CompoundshapeBuilder *builder = new CompoundshapeBuilder();
+    Shape *builderShape = builder->build(rectangle)->build(square)->build(triangle)->getShape();
+    cout << builderShape->area() << endl;
+    cout << builderShape->perimeter() << endl;
+    cout << builderShape->type() << endl;
     cout << "--------------------------------" << endl;
 }
