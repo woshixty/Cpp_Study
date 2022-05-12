@@ -10,7 +10,8 @@ class Product;
 class Factory {
 public:
     virtual ~Factory() = 0;
-    virtual Product* CreateProduct() = 0;
+
+    virtual Product *CreateProduct() = 0;
 
 protected:
     Factory();
@@ -18,11 +19,13 @@ protected:
 private:
 };
 
-class ConcreteFactory:public Factory {
+class ConcreteFactory : public Factory {
 public:
     ~ConcreteFactory();
+
     ConcreteFactory();
-    Product* CreateProduct();
+
+    Product *CreateProduct();
 };
 
 #endif //CPPDESIGNPATTERNS_FACTORY_H

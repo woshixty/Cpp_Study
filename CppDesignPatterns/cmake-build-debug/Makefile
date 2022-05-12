@@ -456,6 +456,30 @@ week03/Round.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Round.cpp.s
 .PHONY : week03/Round.cpp.s
 
+week03/ShapeFactory.o: week03/ShapeFactory.cpp.o
+.PHONY : week03/ShapeFactory.o
+
+# target to build an object file
+week03/ShapeFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.o
+.PHONY : week03/ShapeFactory.cpp.o
+
+week03/ShapeFactory.i: week03/ShapeFactory.cpp.i
+.PHONY : week03/ShapeFactory.i
+
+# target to preprocess a source file
+week03/ShapeFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.i
+.PHONY : week03/ShapeFactory.cpp.i
+
+week03/ShapeFactory.s: week03/ShapeFactory.cpp.s
+.PHONY : week03/ShapeFactory.s
+
+# target to generate assembly for a file
+week03/ShapeFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.s
+.PHONY : week03/ShapeFactory.cpp.s
+
 week03/Square.o: week03/Square.cpp.o
 .PHONY : week03/Square.o
 
@@ -600,6 +624,9 @@ help:
 	@echo "... week03/Round.o"
 	@echo "... week03/Round.i"
 	@echo "... week03/Round.s"
+	@echo "... week03/ShapeFactory.o"
+	@echo "... week03/ShapeFactory.i"
+	@echo "... week03/ShapeFactory.s"
 	@echo "... week03/Square.o"
 	@echo "... week03/Square.i"
 	@echo "... week03/Square.s"

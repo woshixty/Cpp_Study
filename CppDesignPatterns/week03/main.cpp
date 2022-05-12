@@ -10,27 +10,30 @@
 #include "Square.h"
 #include "Compoundshape.h"
 #include "CompoundshapeBuilder.h"
+#include "ShapeFactory.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
+    ShapeFactory shapeFactory;
+
     cout << "Rectangle" << endl;
-    Shape *rectangle = new Rectangle(3, 4);
+    Shape *rectangle = shapeFactory.getRectangle(3, 3);
     cout << rectangle->area() << endl;
     cout << rectangle->perimeter() << endl;
     cout << rectangle->type() << endl;
     cout << "--------------------------------" << endl;
 
     cout << "Square" << endl;
-    Shape *square = new Square(3);
+    Shape *square = shapeFactory.getSquare(3);
     cout << square->area() << endl;
     cout << square->perimeter() << endl;
     cout << square->type() << endl;
     cout << "--------------------------------" << endl;
 
     cout << "Triangle" << endl;
-    Shape *triangle = new Triangle(3, 4, 5);
+    Shape *triangle = shapeFactory.getTriangle(3, 4, 5);
     cout << triangle->area() << endl;
     cout << triangle->perimeter() << endl;
     cout << triangle->type() << endl;

@@ -9,14 +9,16 @@
 class Product {
 public:
     virtual ~Product() = 0;
+
 protected:
     // 屏蔽构造函数
     Product();
 };
 
-class ConcreteProduct:public Product {
+class ConcreteProduct : public Product {
 public:
     ~ConcreteProduct();
+
     ConcreteProduct();
 };
 

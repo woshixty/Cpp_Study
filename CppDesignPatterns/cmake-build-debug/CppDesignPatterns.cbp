@@ -264,6 +264,12 @@
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Shape.h">
 			<Option target="week03"/>
 		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/ShapeFactory.cpp">
+			<Option target="week03"/>
+		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/ShapeFactory.h">
+			<Option target="week03"/>
+		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Square.cpp">
 			<Option target="week03"/>
 		</Unit>

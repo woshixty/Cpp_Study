@@ -48,6 +48,9 @@ public:
             case triangle:
                 point = new Triangle(shape);
                 break;
+            case compoundshape:
+                point = nullptr;
+                break;
         }
         return point;
     }
