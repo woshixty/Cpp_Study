@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named builder
+# Target rules for targets named factory
 
 # Build rule for target.
-builder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 builder
-.PHONY : builder
+factory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 factory
+.PHONY : factory
 
 # fast build rule for target.
-builder/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
-.PHONY : builder/fast
+factory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
+.PHONY : factory/fast
+
+#=============================================================================
+# Target rules for targets named week04
+
+# Build rule for target.
+week04: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week04
+.PHONY : week04
+
+# fast build rule for target.
+week04/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
+.PHONY : week04/fast
 
 #=============================================================================
 # Target rules for targets named week03
@@ -143,17 +156,17 @@ week03/fast:
 .PHONY : week03/fast
 
 #=============================================================================
-# Target rules for targets named factory
+# Target rules for targets named builder
 
 # Build rule for target.
-factory: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 factory
-.PHONY : factory
+builder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 builder
+.PHONY : builder
 
 # fast build rule for target.
-factory/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
-.PHONY : factory/fast
+builder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
+.PHONY : builder/fast
 
 #=============================================================================
 # Target rules for targets named CppDesignPatterns
@@ -576,6 +589,54 @@ week03/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.s
 .PHONY : week03/main.cpp.s
 
+week04/KMatrix.o: week04/KMatrix.cpp.o
+.PHONY : week04/KMatrix.o
+
+# target to build an object file
+week04/KMatrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.o
+.PHONY : week04/KMatrix.cpp.o
+
+week04/KMatrix.i: week04/KMatrix.cpp.i
+.PHONY : week04/KMatrix.i
+
+# target to preprocess a source file
+week04/KMatrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.i
+.PHONY : week04/KMatrix.cpp.i
+
+week04/KMatrix.s: week04/KMatrix.cpp.s
+.PHONY : week04/KMatrix.s
+
+# target to generate assembly for a file
+week04/KMatrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.s
+.PHONY : week04/KMatrix.cpp.s
+
+week04/main.o: week04/main.cpp.o
+.PHONY : week04/main.o
+
+# target to build an object file
+week04/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.o
+.PHONY : week04/main.cpp.o
+
+week04/main.i: week04/main.cpp.i
+.PHONY : week04/main.i
+
+# target to preprocess a source file
+week04/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.i
+.PHONY : week04/main.cpp.i
+
+week04/main.s: week04/main.cpp.s
+.PHONY : week04/main.s
+
+# target to generate assembly for a file
+week04/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.s
+.PHONY : week04/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -588,6 +649,7 @@ help:
 	@echo "... builder"
 	@echo "... factory"
 	@echo "... week03"
+	@echo "... week04"
 	@echo "... builder/Builder.o"
 	@echo "... builder/Builder.i"
 	@echo "... builder/Builder.s"
@@ -639,6 +701,12 @@ help:
 	@echo "... week03/main.o"
 	@echo "... week03/main.i"
 	@echo "... week03/main.s"
+	@echo "... week04/KMatrix.o"
+	@echo "... week04/KMatrix.i"
+	@echo "... week04/KMatrix.s"
+	@echo "... week04/main.o"
+	@echo "... week04/main.i"
+	@echo "... week04/main.s"
 .PHONY : help
 
 

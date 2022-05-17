@@ -130,6 +130,19 @@ depend:
 .PHONY : 16-1/fast
 
 #=============================================================================
+# Target rules for targets named kingT
+
+# Build rule for target.
+kingT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kingT
+.PHONY : kingT
+
+# fast build rule for target.
+kingT/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/build
+.PHONY : kingT/fast
+
+#=============================================================================
 # Target rules for targets named chapter16
 
 # Build rule for target.
@@ -251,6 +264,30 @@ chapter16/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/chapter16/main.cpp.s
 .PHONY : chapter16/main.cpp.s
 
+kingsoftware/test.o: kingsoftware/test.cpp.o
+.PHONY : kingsoftware/test.o
+
+# target to build an object file
+kingsoftware/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.o
+.PHONY : kingsoftware/test.cpp.o
+
+kingsoftware/test.i: kingsoftware/test.cpp.i
+.PHONY : kingsoftware/test.i
+
+# target to preprocess a source file
+kingsoftware/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.i
+.PHONY : kingsoftware/test.cpp.i
+
+kingsoftware/test.s: kingsoftware/test.cpp.s
+.PHONY : kingsoftware/test.s
+
+# target to generate assembly for a file
+kingsoftware/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.s
+.PHONY : kingsoftware/test.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -285,6 +322,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... 16-1"
 	@echo "... chapter16"
+	@echo "... kingT"
 	@echo "... main"
 	@echo "... chapter11/mytime0.o"
 	@echo "... chapter11/mytime0.i"
@@ -298,6 +336,9 @@ help:
 	@echo "... chapter16/main.o"
 	@echo "... chapter16/main.i"
 	@echo "... chapter16/main.s"
+	@echo "... kingsoftware/test.o"
+	@echo "... kingsoftware/test.i"
+	@echo "... kingsoftware/test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

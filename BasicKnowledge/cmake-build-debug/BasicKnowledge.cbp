@@ -77,6 +77,46 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="kingT">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/kingT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 kingT"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kingT/fast">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/kingT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 kingT/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="chapter16">
 				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/chapter16" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
@@ -175,6 +215,12 @@
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter16/main.cpp">
 			<Option target="chapter16"/>
+		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.cpp">
+			<Option target="kingT"/>
+		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.h">
+			<Option target="kingT"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/main.cpp">
 			<Option target="main"/>

@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build
 
 # The main recursive "all" target.
 all: CMakeFiles/16-1.dir/all
+all: CMakeFiles/kingT.dir/all
 all: CMakeFiles/chapter16.dir/all
 all: CMakeFiles/main.dir/all
 .PHONY : all
@@ -74,6 +75,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/16-1.dir/clean
+clean: CMakeFiles/kingT.dir/clean
 clean: CMakeFiles/chapter16.dir/clean
 clean: CMakeFiles/main.dir/clean
 .PHONY : clean
@@ -103,6 +105,32 @@ CMakeFiles/16-1.dir/rule: cmake_check_build_system
 CMakeFiles/16-1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/clean
 .PHONY : CMakeFiles/16-1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/kingT.dir
+
+# All Build rule for target.
+CMakeFiles/kingT.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target kingT"
+.PHONY : CMakeFiles/kingT.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/kingT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kingT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/kingT.dir/rule
+
+# Convenience name for target.
+kingT: CMakeFiles/kingT.dir/rule
+.PHONY : kingT
+
+# clean rule for target.
+CMakeFiles/kingT.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/clean
+.PHONY : CMakeFiles/kingT.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/chapter16.dir
@@ -137,7 +165,7 @@ CMakeFiles/chapter16.dir/clean:
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
