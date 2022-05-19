@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/vectorT.dir/all
 all: CMakeFiles/16-1.dir/all
 all: CMakeFiles/kingT.dir/all
 all: CMakeFiles/chapter16.dir/all
@@ -74,11 +75,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/vectorT.dir/clean
 clean: CMakeFiles/16-1.dir/clean
 clean: CMakeFiles/kingT.dir/clean
 clean: CMakeFiles/chapter16.dir/clean
 clean: CMakeFiles/main.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/vectorT.dir
+
+# All Build rule for target.
+CMakeFiles/vectorT.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target vectorT"
+.PHONY : CMakeFiles/vectorT.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/vectorT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vectorT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/vectorT.dir/rule
+
+# Convenience name for target.
+vectorT: CMakeFiles/vectorT.dir/rule
+.PHONY : vectorT
+
+# clean rule for target.
+CMakeFiles/vectorT.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/clean
+.PHONY : CMakeFiles/vectorT.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/16-1.dir

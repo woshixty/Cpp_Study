@@ -1,0 +1,14 @@
+//
+// Created by 谢庭宇 on 2022/5/18.
+//
+
+#ifndef CPPDESIGNPATTERNS_KMATRIXPLUS_H
+#define CPPDESIGNPATTERNS_KMATRIXPLUS_H
+
+
+class KMatrixPlus {
+
+};
+
+
+#endif //CPPDESIGNPATTERNS_KMATRIXPLUS_H

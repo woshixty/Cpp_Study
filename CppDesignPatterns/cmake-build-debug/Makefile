@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TemTest
+
+# Build rule for target.
+TemTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TemTest
+.PHONY : TemTest
+
+# fast build rule for target.
+TemTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/build
+.PHONY : TemTest/fast
+
+#=============================================================================
 # Target rules for targets named factory
 
 # Build rule for target.
@@ -613,6 +626,30 @@ week04/KMatrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.s
 .PHONY : week04/KMatrix.cpp.s
 
+week04/Test.o: week04/Test.cpp.o
+.PHONY : week04/Test.o
+
+# target to build an object file
+week04/Test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.o
+.PHONY : week04/Test.cpp.o
+
+week04/Test.i: week04/Test.cpp.i
+.PHONY : week04/Test.i
+
+# target to preprocess a source file
+week04/Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.i
+.PHONY : week04/Test.cpp.i
+
+week04/Test.s: week04/Test.cpp.s
+.PHONY : week04/Test.s
+
+# target to generate assembly for a file
+week04/Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.s
+.PHONY : week04/Test.cpp.s
+
 week04/main.o: week04/main.cpp.o
 .PHONY : week04/main.o
 
@@ -646,6 +683,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppDesignPatterns"
+	@echo "... TemTest"
 	@echo "... builder"
 	@echo "... factory"
 	@echo "... week03"
@@ -704,6 +742,9 @@ help:
 	@echo "... week04/KMatrix.o"
 	@echo "... week04/KMatrix.i"
 	@echo "... week04/KMatrix.s"
+	@echo "... week04/Test.o"
+	@echo "... week04/Test.i"
+	@echo "... week04/Test.s"
 	@echo "... week04/main.o"
 	@echo "... week04/main.i"
 	@echo "... week04/main.s"

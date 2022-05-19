@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named vectorT
+
+# Build rule for target.
+vectorT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vectorT
+.PHONY : vectorT
+
+# fast build rule for target.
+vectorT/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/build
+.PHONY : vectorT/fast
+
+#=============================================================================
 # Target rules for targets named 16-1
 
 # Build rule for target.
@@ -312,6 +325,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vectorT/main.o: vectorT/main.cpp.o
+.PHONY : vectorT/main.o
+
+# target to build an object file
+vectorT/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.o
+.PHONY : vectorT/main.cpp.o
+
+vectorT/main.i: vectorT/main.cpp.i
+.PHONY : vectorT/main.i
+
+# target to preprocess a source file
+vectorT/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.i
+.PHONY : vectorT/main.cpp.i
+
+vectorT/main.s: vectorT/main.cpp.s
+.PHONY : vectorT/main.s
+
+# target to generate assembly for a file
+vectorT/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.s
+.PHONY : vectorT/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -324,6 +361,7 @@ help:
 	@echo "... chapter16"
 	@echo "... kingT"
 	@echo "... main"
+	@echo "... vectorT"
 	@echo "... chapter11/mytime0.o"
 	@echo "... chapter11/mytime0.i"
 	@echo "... chapter11/mytime0.s"
@@ -342,6 +380,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vectorT/main.o"
+	@echo "... vectorT/main.i"
+	@echo "... vectorT/main.s"
 .PHONY : help
 
 
