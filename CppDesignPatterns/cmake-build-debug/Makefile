@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TemTest
+# Target rules for targets named singleton
 
 # Build rule for target.
-TemTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TemTest
-.PHONY : TemTest
+singleton: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 singleton
+.PHONY : singleton
 
 # fast build rule for target.
-TemTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/build
-.PHONY : TemTest/fast
+singleton/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/build
+.PHONY : singleton/fast
+
+#=============================================================================
+# Target rules for targets named temTest
+
+# Build rule for target.
+temTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 temTest
+.PHONY : temTest
+
+# fast build rule for target.
+temTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/build
+.PHONY : temTest/fast
 
 #=============================================================================
 # Target rules for targets named factory
@@ -386,6 +399,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+singleton/Singleton.o: singleton/Singleton.cpp.o
+.PHONY : singleton/Singleton.o
+
+# target to build an object file
+singleton/Singleton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.o
+.PHONY : singleton/Singleton.cpp.o
+
+singleton/Singleton.i: singleton/Singleton.cpp.i
+.PHONY : singleton/Singleton.i
+
+# target to preprocess a source file
+singleton/Singleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.i
+.PHONY : singleton/Singleton.cpp.i
+
+singleton/Singleton.s: singleton/Singleton.cpp.s
+.PHONY : singleton/Singleton.s
+
+# target to generate assembly for a file
+singleton/Singleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.s
+.PHONY : singleton/Singleton.cpp.s
+
 week03/Compoundshape.o: week03/Compoundshape.cpp.o
 .PHONY : week03/Compoundshape.o
 
@@ -631,7 +668,7 @@ week04/Test.o: week04/Test.cpp.o
 
 # target to build an object file
 week04/Test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.o
 .PHONY : week04/Test.cpp.o
 
 week04/Test.i: week04/Test.cpp.i
@@ -639,7 +676,7 @@ week04/Test.i: week04/Test.cpp.i
 
 # target to preprocess a source file
 week04/Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.i
 .PHONY : week04/Test.cpp.i
 
 week04/Test.s: week04/Test.cpp.s
@@ -647,7 +684,7 @@ week04/Test.s: week04/Test.cpp.s
 
 # target to generate assembly for a file
 week04/Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TemTest.dir/build.make CMakeFiles/TemTest.dir/week04/Test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.s
 .PHONY : week04/Test.cpp.s
 
 week04/main.o: week04/main.cpp.o
@@ -683,9 +720,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppDesignPatterns"
-	@echo "... TemTest"
 	@echo "... builder"
 	@echo "... factory"
+	@echo "... singleton"
+	@echo "... temTest"
 	@echo "... week03"
 	@echo "... week04"
 	@echo "... builder/Builder.o"
@@ -712,6 +750,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... singleton/Singleton.o"
+	@echo "... singleton/Singleton.i"
+	@echo "... singleton/Singleton.s"
 	@echo "... week03/Compoundshape.o"
 	@echo "... week03/Compoundshape.i"
 	@echo "... week03/Compoundshape.s"

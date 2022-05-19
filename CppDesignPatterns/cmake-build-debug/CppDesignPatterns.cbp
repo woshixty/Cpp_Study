@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TemTest">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/TemTest" prefix_auto="0" extension_auto="0"/>
+			<Target title="singleton">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/singleton" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -51,14 +51,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 TemTest"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 singleton"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TemTest/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/TemTest" prefix_auto="0" extension_auto="0"/>
+			<Target title="singleton/fast">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/singleton" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -71,7 +71,47 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 TemTest/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 singleton/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="temTest">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/temTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 temTest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="temTest/fast">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/temTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 temTest/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -317,6 +357,12 @@
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/main.cpp">
 			<Option target="CppDesignPatterns"/>
 		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.cpp">
+			<Option target="singleton"/>
+		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.h">
+			<Option target="singleton"/>
+		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Compoundshape.cpp">
 			<Option target="week03"/>
 		</Unit>
@@ -378,10 +424,10 @@
 			<Option target="week04"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/Test.cpp">
-			<Option target="TemTest"/>
+			<Option target="temTest"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/Test.h">
-			<Option target="TemTest"/>
+			<Option target="temTest"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/main.cpp">
 			<Option target="week04"/>

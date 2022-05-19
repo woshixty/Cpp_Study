@@ -49,7 +49,19 @@ public:
     void eraseRow(int row);
 
     // 加
-    friend KMatrix<T> operator+(KMatrix<T> a, KMatrix<T> b);
+    friend KMatrix<T>* operator+(KMatrix<T> a, KMatrix<T> b) {
+        // TODO 判断能否相加
+        vector<vector<T>> newMatrix;
+        for (int i = 0; i < a.row; ++i) {
+            vector<T> newRow;
+            for (int j = 0; j < a.column; ++j) {
+                newRow.push_back(a.matrix[i][j] + b.matrix[i][j]);
+            }
+            newMatrix.push_back(newRow);
+        }
+        KMatrix<T> *result = new KMatrix<T>(newMatrix, a.row, a.column);
+        return result;
+    }
 
     // 减
     friend KMatrix<T> operator-(KMatrix<T> a, KMatrix<T> b);
@@ -58,7 +70,7 @@ public:
     friend KMatrix<T> operator*(KMatrix<T> a, KMatrix<T> b);
 
     // 转置
-    KMatrix<T> transpose();
+    KMatrix<T>* transpose();
 
     // 输出
     void print() const;
@@ -72,17 +84,14 @@ private:
 };
 
 template<typename T>
-KMatrix<T> operator+(KMatrix<T> a, KMatrix<T> b) {
-    return KMatrix<T>();
-}
-
-template<typename T>
 KMatrix<T> operator-(KMatrix<T> a, KMatrix<T> b) {
+    // TODO 判断能否相减
     return KMatrix<T>();
 }
 
 template<typename T>
 KMatrix<T> operator*(KMatrix<T> a, KMatrix<T> b) {
+    // TODO 判断能否相乘
     return KMatrix<T>();
 }
 

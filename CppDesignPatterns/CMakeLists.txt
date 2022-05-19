@@ -8,4 +8,5 @@ add_executable(factory factory/Product.cpp factory/Product.h factory/Factory.cpp
 add_executable(builder builder/main.cpp builder/Product.cpp builder/Product.h builder/Builder.cpp builder/Builder.h builder/Director.cpp builder/Director.h)
 add_executable(week03 week03/main.cpp week03/Shape.h week03/Triangle.cpp week03/Triangle.h week03/Square.cpp week03/Square.h week03/Rectangle.cpp week03/Rectangle.h week03/Trapezium.cpp week03/Trapezium.h week03/Round.cpp week03/Round.h week03/Compoundshape.cpp week03/Compoundshape.h week03/CompoundshapeBuilder.cpp week03/CompoundshapeBuilder.h week03/ShapeFactory.cpp week03/ShapeFactory.h)
 add_executable(week04 week04/main.cpp week04/KMatrix.cpp week04/KMatrix.h)
-add_executable(TemTest week04/Test.cpp week04/Test.h)
+add_executable(temTest week04/Test.cpp week04/Test.h)
+add_executable(singleton singleton/Singleton.cpp singleton/Singleton.h)

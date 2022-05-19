@@ -4,6 +4,7 @@
 
 #include "KMatrix.h"
 #include "KMatrix.cpp"
+#include <iostream>
 
 using namespace std;
 
@@ -56,7 +57,12 @@ int main() {
     kMatrix1era.print();
     cout << "---------" << endl << endl;
 
+    KMatrix<double> *p = kMatrix1era.transpose();
     cout << "kMatrix1re" << endl;
-    kMatrix1era.transpose().print();
+    p->print();
+    cout << "---------" << endl << endl;
+
+    cout << "kMatrix3 + kMatrix2" << endl;
+    (kMatrix3 + kMatrix2)->print();
     cout << "---------" << endl << endl;
 }

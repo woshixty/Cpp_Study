@@ -100,7 +100,7 @@ void KMatrix<T>::eraseRow(int row) {
 }
 
 template<typename T>
-KMatrix<T> KMatrix<T>::transpose() {
+KMatrix<T>* KMatrix<T>::transpose() {
     // 交换行列值
     vector<vector<T>> data;
     for (int i = 0; i < column; ++i) {
@@ -110,7 +110,7 @@ KMatrix<T> KMatrix<T>::transpose() {
         }
         data.push_back(currRow);
     }
-    KMatrix<T> result(data, column, row);
+    KMatrix<T> *result = new KMatrix<T>(data, column, row);
     return result;
 }
 
@@ -129,3 +129,6 @@ vector<vector<T>> &KMatrix<T>::getMatrix() {
     // 拷贝一份matrix返回
     return matrix;
 }
+
+//template<typename T>
+//KMatrix<T> operator+(KMatrix<T> a, KMatrix<T> b)
