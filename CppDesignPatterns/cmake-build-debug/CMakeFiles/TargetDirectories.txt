@@ -1,5 +1,6 @@
-/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/testMap.dir
 /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/testVector.dir
 /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/singleton.dir
 /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles/week03.dir

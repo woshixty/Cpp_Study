@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-bu
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/testMap.dir/all
 all: CMakeFiles/testVector.dir/all
 all: CMakeFiles/singleton.dir/all
 all: CMakeFiles/week03.dir/all
@@ -77,6 +78,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/testMap.dir/clean
 clean: CMakeFiles/testVector.dir/clean
 clean: CMakeFiles/singleton.dir/clean
 clean: CMakeFiles/week03.dir/clean
@@ -87,13 +89,39 @@ clean: CMakeFiles/cppDesignPatterns.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/testMap.dir
+
+# All Build rule for target.
+CMakeFiles/testMap.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target testMap"
+.PHONY : CMakeFiles/testMap.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testMap.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testMap.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/testMap.dir/rule
+
+# Convenience name for target.
+testMap: CMakeFiles/testMap.dir/rule
+.PHONY : testMap
+
+# clean rule for target.
+CMakeFiles/testMap.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/clean
+.PHONY : CMakeFiles/testMap.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/testVector.dir
 
 # All Build rule for target.
 CMakeFiles/testVector.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target testVector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target testVector"
 .PHONY : CMakeFiles/testVector.dir/all
 
 # Build rule for subdir invocation for target.
@@ -145,7 +173,7 @@ CMakeFiles/singleton.dir/clean:
 CMakeFiles/week03.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25 "Built target week03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27 "Built target week03"
 .PHONY : CMakeFiles/week03.dir/all
 
 # Build rule for subdir invocation for target.
@@ -223,12 +251,12 @@ CMakeFiles/factory.dir/clean:
 CMakeFiles/week04.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29,30 "Built target week04"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles --progress-num=28,29 "Built target week04"
 .PHONY : CMakeFiles/week04.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/week04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/week04.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/week04.dir/rule

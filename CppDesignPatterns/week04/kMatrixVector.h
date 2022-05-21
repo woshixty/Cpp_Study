@@ -70,9 +70,7 @@ public:
     KMatrixVector<T> &operator=(KMatrixVector<T> const &other) {
         m_row = other.m_row;
         m_column = other.m_column;
-        for (int i = 0; i < other.m_row; ++i) {
-            m_matrix.push_back(std::vector<T>(other.m_matrix[i]));
-        }
+        m_matrix = other.m_matrix;
     }
 
     KMatrixVector<T> operator+(KMatrixVector<T> const &other) {
@@ -142,7 +140,7 @@ public:
     }
 
 private:
-    size_t m_row{}, m_column{};
+    size_t m_row, m_column;
 
     matrix m_matrix;
 };
