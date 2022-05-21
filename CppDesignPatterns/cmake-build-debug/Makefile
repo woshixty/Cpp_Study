@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testVector
+
+# Build rule for target.
+testVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testVector
+.PHONY : testVector
+
+# fast build rule for target.
+testVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/build
+.PHONY : testVector/fast
+
+#=============================================================================
 # Target rules for targets named singleton
 
 # Build rule for target.
@@ -128,45 +141,6 @@ singleton: cmake_check_build_system
 singleton/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/build
 .PHONY : singleton/fast
-
-#=============================================================================
-# Target rules for targets named temTest
-
-# Build rule for target.
-temTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 temTest
-.PHONY : temTest
-
-# fast build rule for target.
-temTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/build
-.PHONY : temTest/fast
-
-#=============================================================================
-# Target rules for targets named factory
-
-# Build rule for target.
-factory: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 factory
-.PHONY : factory
-
-# fast build rule for target.
-factory/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
-.PHONY : factory/fast
-
-#=============================================================================
-# Target rules for targets named week04
-
-# Build rule for target.
-week04: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week04
-.PHONY : week04
-
-# fast build rule for target.
-week04/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
-.PHONY : week04/fast
 
 #=============================================================================
 # Target rules for targets named week03
@@ -195,17 +169,43 @@ builder/fast:
 .PHONY : builder/fast
 
 #=============================================================================
-# Target rules for targets named CppDesignPatterns
+# Target rules for targets named factory
 
 # Build rule for target.
-CppDesignPatterns: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CppDesignPatterns
-.PHONY : CppDesignPatterns
+factory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 factory
+.PHONY : factory
 
 # fast build rule for target.
-CppDesignPatterns/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/build
-.PHONY : CppDesignPatterns/fast
+factory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
+.PHONY : factory/fast
+
+#=============================================================================
+# Target rules for targets named week04
+
+# Build rule for target.
+week04: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week04
+.PHONY : week04
+
+# fast build rule for target.
+week04/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
+.PHONY : week04/fast
+
+#=============================================================================
+# Target rules for targets named cppDesignPatterns
+
+# Build rule for target.
+cppDesignPatterns: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cppDesignPatterns
+.PHONY : cppDesignPatterns
+
+# fast build rule for target.
+cppDesignPatterns/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/build
+.PHONY : cppDesignPatterns/fast
 
 builder/Builder.o: builder/Builder.cpp.o
 .PHONY : builder/Builder.o
@@ -380,7 +380,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -388,7 +388,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -396,7 +396,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 singleton/Singleton.o: singleton/Singleton.cpp.o
@@ -639,53 +639,101 @@ week03/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.s
 .PHONY : week03/main.cpp.s
 
-week04/KMatrix.o: week04/KMatrix.cpp.o
-.PHONY : week04/KMatrix.o
+week04/TestVector.o: week04/TestVector.cpp.o
+.PHONY : week04/TestVector.o
 
 # target to build an object file
-week04/KMatrix.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.o
-.PHONY : week04/KMatrix.cpp.o
+week04/TestVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.o
+.PHONY : week04/TestVector.cpp.o
 
-week04/KMatrix.i: week04/KMatrix.cpp.i
-.PHONY : week04/KMatrix.i
+week04/TestVector.i: week04/TestVector.cpp.i
+.PHONY : week04/TestVector.i
 
 # target to preprocess a source file
-week04/KMatrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.i
-.PHONY : week04/KMatrix.cpp.i
+week04/TestVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.i
+.PHONY : week04/TestVector.cpp.i
 
-week04/KMatrix.s: week04/KMatrix.cpp.s
-.PHONY : week04/KMatrix.s
+week04/TestVector.s: week04/TestVector.cpp.s
+.PHONY : week04/TestVector.s
 
 # target to generate assembly for a file
-week04/KMatrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/KMatrix.cpp.s
-.PHONY : week04/KMatrix.cpp.s
+week04/TestVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.s
+.PHONY : week04/TestVector.cpp.s
 
-week04/Test.o: week04/Test.cpp.o
-.PHONY : week04/Test.o
+week04/kMatrixMap.o: week04/kMatrixMap.cpp.o
+.PHONY : week04/kMatrixMap.o
 
 # target to build an object file
-week04/Test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.o
-.PHONY : week04/Test.cpp.o
+week04/kMatrixMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixMap.cpp.o
+.PHONY : week04/kMatrixMap.cpp.o
 
-week04/Test.i: week04/Test.cpp.i
-.PHONY : week04/Test.i
+week04/kMatrixMap.i: week04/kMatrixMap.cpp.i
+.PHONY : week04/kMatrixMap.i
 
 # target to preprocess a source file
-week04/Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.i
-.PHONY : week04/Test.cpp.i
+week04/kMatrixMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixMap.cpp.i
+.PHONY : week04/kMatrixMap.cpp.i
 
-week04/Test.s: week04/Test.cpp.s
-.PHONY : week04/Test.s
+week04/kMatrixMap.s: week04/kMatrixMap.cpp.s
+.PHONY : week04/kMatrixMap.s
 
 # target to generate assembly for a file
-week04/Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temTest.dir/build.make CMakeFiles/temTest.dir/week04/Test.cpp.s
-.PHONY : week04/Test.cpp.s
+week04/kMatrixMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixMap.cpp.s
+.PHONY : week04/kMatrixMap.cpp.s
+
+week04/kMatrixVector.o: week04/kMatrixVector.cpp.o
+.PHONY : week04/kMatrixVector.o
+
+# target to build an object file
+week04/kMatrixVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVector.cpp.o
+.PHONY : week04/kMatrixVector.cpp.o
+
+week04/kMatrixVector.i: week04/kMatrixVector.cpp.i
+.PHONY : week04/kMatrixVector.i
+
+# target to preprocess a source file
+week04/kMatrixVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVector.cpp.i
+.PHONY : week04/kMatrixVector.cpp.i
+
+week04/kMatrixVector.s: week04/kMatrixVector.cpp.s
+.PHONY : week04/kMatrixVector.s
+
+# target to generate assembly for a file
+week04/kMatrixVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVector.cpp.s
+.PHONY : week04/kMatrixVector.cpp.s
+
+week04/kMatrixVectorSource.o: week04/kMatrixVectorSource.cpp.o
+.PHONY : week04/kMatrixVectorSource.o
+
+# target to build an object file
+week04/kMatrixVectorSource.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVectorSource.cpp.o
+.PHONY : week04/kMatrixVectorSource.cpp.o
+
+week04/kMatrixVectorSource.i: week04/kMatrixVectorSource.cpp.i
+.PHONY : week04/kMatrixVectorSource.i
+
+# target to preprocess a source file
+week04/kMatrixVectorSource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVectorSource.cpp.i
+.PHONY : week04/kMatrixVectorSource.cpp.i
+
+week04/kMatrixVectorSource.s: week04/kMatrixVectorSource.cpp.s
+.PHONY : week04/kMatrixVectorSource.s
+
+# target to generate assembly for a file
+week04/kMatrixVectorSource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/kMatrixVectorSource.cpp.s
+.PHONY : week04/kMatrixVectorSource.cpp.s
 
 week04/main.o: week04/main.cpp.o
 .PHONY : week04/main.o
@@ -719,11 +767,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CppDesignPatterns"
 	@echo "... builder"
+	@echo "... cppDesignPatterns"
 	@echo "... factory"
 	@echo "... singleton"
-	@echo "... temTest"
+	@echo "... testVector"
 	@echo "... week03"
 	@echo "... week04"
 	@echo "... builder/Builder.o"
@@ -780,12 +828,18 @@ help:
 	@echo "... week03/main.o"
 	@echo "... week03/main.i"
 	@echo "... week03/main.s"
-	@echo "... week04/KMatrix.o"
-	@echo "... week04/KMatrix.i"
-	@echo "... week04/KMatrix.s"
-	@echo "... week04/Test.o"
-	@echo "... week04/Test.i"
-	@echo "... week04/Test.s"
+	@echo "... week04/TestVector.o"
+	@echo "... week04/TestVector.i"
+	@echo "... week04/TestVector.s"
+	@echo "... week04/kMatrixMap.o"
+	@echo "... week04/kMatrixMap.i"
+	@echo "... week04/kMatrixMap.s"
+	@echo "... week04/kMatrixVector.o"
+	@echo "... week04/kMatrixVector.i"
+	@echo "... week04/kMatrixVector.s"
+	@echo "... week04/kMatrixVectorSource.o"
+	@echo "... week04/kMatrixVectorSource.i"
+	@echo "... week04/kMatrixVectorSource.s"
 	@echo "... week04/main.o"
 	@echo "... week04/main.i"
 	@echo "... week04/main.s"

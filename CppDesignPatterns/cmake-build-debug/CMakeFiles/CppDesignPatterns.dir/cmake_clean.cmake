@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CppDesignPatterns.dir/main.cpp.o"
-  "CppDesignPatterns"
-  "CppDesignPatterns.pdb"
+  "CMakeFiles/cppDesignPatterns.dir/main.cpp.o"
+  "cppDesignPatterns"
+  "cppDesignPatterns.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/CppDesignPatterns.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/cppDesignPatterns.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

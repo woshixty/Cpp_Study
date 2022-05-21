@@ -50,11 +50,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/testVector.dir/DependInfo.cmake"
   "CMakeFiles/singleton.dir/DependInfo.cmake"
-  "CMakeFiles/temTest.dir/DependInfo.cmake"
-  "CMakeFiles/factory.dir/DependInfo.cmake"
-  "CMakeFiles/week04.dir/DependInfo.cmake"
   "CMakeFiles/week03.dir/DependInfo.cmake"
   "CMakeFiles/builder.dir/DependInfo.cmake"
-  "CMakeFiles/CppDesignPatterns.dir/DependInfo.cmake"
+  "CMakeFiles/factory.dir/DependInfo.cmake"
+  "CMakeFiles/week04.dir/DependInfo.cmake"
+  "CMakeFiles/cppDesignPatterns.dir/DependInfo.cmake"
   )
