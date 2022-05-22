@@ -15,4 +15,9 @@ int main() {
     matrix3.transpose().print();
     (matrix3 * matrix3.transpose()).print();
     (matrix3.transpose() * matrix3).print();
+
+    KMatrixMap<int> map = (matrix3 * matrix3.transpose());
+    map.eraseRow(1);
+    map.eraseColumns(1);
+    map.print();
 }
