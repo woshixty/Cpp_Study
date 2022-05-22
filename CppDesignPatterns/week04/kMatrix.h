@@ -2,115 +2,133 @@
 // Created by 谢庭宇 on 2022/5/21.
 //
 
-#ifndef _WEEK04_KMATRIX_H_
-#define _WEEK04_KMATRIX_H_
+#ifndef _WEEK04_KMATRIX_BASE_H_
+#define _WEEK04_KMATRIX_BASE_H_
 
+#include <algorithm>
 #include <iostream>
-#include <vector>
+#include <numeric>
+#include <map>
 
-template<typename T>
-class KMatrixVectorSource {
-public:
-    // 空构造函数
-    KMatrixVectorSource();
-    // 拷贝构造函数
-    KMatrixVectorSource(KMatrixVectorSource<T> &src);
-    // 构造 0 矩阵
-    KMatrixVectorSource(size_t row, size_t column);
-    // 使用数组构造矩阵
-    KMatrixVectorSource(size_t row, size_t column, T *src);
-    // 使用矩阵构造矩阵
-    KMatrixVectorSource(std::vector<std::vector<T>> src, size_t row, size_t column);
-
-    // 初始化行列信息赋值为0
-    void initialize(size_t row, size_t column);
-    // 初始化行列信息并赋值
-    void initialize(size_t row, size_t column, T *src);
-
-    // 获得行
-    size_t getRows() const;
-    // 获得列
-    size_t getCols() const;
-    // 设置值
-    void setData(size_t row, size_t col, T value);
-    // 得到值
-    T getData(size_t row, size_t col) const;
-
-    // 删除行
-    void eraseRow(size_t row);
-    // 删除列
-    void eraseColumn(size_t col);
-
-    // 转置
-    KMatrixVectorSource<T> *transpose();
-    // 输出
-    void print() const;
-
-    // =重载
-    KMatrixVectorSource<T>& operator=(KMatrixVectorSource<T> const &src);
-    KMatrixVectorSource<T>& operator=(std::vector<std::vector<T>> const &src);
-
-    // 加
-    friend KMatrixVectorSource<T> *operator+(KMatrixVectorSource<T> a, KMatrixVectorSource<T> b) {
-        if (a.m_row != b.m_row || a.m_column != b.m_column) {
-            throw std::invalid_argument("矩阵结构不一样，不能相加");
-        }
-        std::vector<std::vector<T>> newMatrix;
-        for (size_t i = 0; i < a.m_row; ++i) {
-            std::vector<T> newRow;
-            for (size_t j = 0; j < a.m_column; ++j) {
-                newRow.push_back(a.m_matrix[i][j] + b.m_matrix[i][j]);
-            }
-            newMatrix.push_back(newRow);
-        }
-        auto *result = new KMatrixVectorSource<T>(newMatrix, a.m_row, a.m_column);
-        return result;
-    }
-    // 减
-    friend KMatrixVectorSource<T> *operator-(KMatrixVectorSource<T> a, KMatrixVectorSource<T> b) {
-        if (a.m_row != b.m_row || a.m_column != b.m_column) {
-            throw std::invalid_argument("矩阵结构不一样，不能相减");
-        }
-        std::vector<std::vector<T>> newMatrix;
-        for (size_t i = 0; i < a.m_row; ++i) {
-            std::vector<T> newRow;
-            for (size_t j = 0; j < a.m_column; ++j) {
-                newRow.push_back(a.m_matrix[i][j] - b.m_matrix[i][j]);
-            }
-            newMatrix.push_back(newRow);
-        }
-        auto *result = new KMatrixVectorSource<T>(newMatrix, a.m_row, a.m_column);
-        return result;
-    }
-    // 乘
-    friend KMatrixVectorSource<T> *operator*(KMatrixVectorSource<T> a, KMatrixVectorSource<T> b) {
-        if (a.m_row != b.m_column || a.m_column != b.m_row) {
-            throw std::invalid_argument("矩阵结构不能相乘");
-        }
-        std::vector<std::vector<T>> newMatrix;
-        size_t newRow = a.m_row;
-        size_t newColumn = b.m_column;
-        for (size_t i = 0; i < newRow; ++i) {
-            std::vector<T> temp;
-            for (size_t j = 0; j < newColumn; ++j) {
-                T data = (T) 0;
-                for (size_t k = 0; k < a.m_column; ++k) {
-                    data += a.getData(i, k) * b.getData(k, j);
-                }
-                temp.push_back(data);
-            }
-            newMatrix.push_back(temp);
-        }
-        auto *result = new KMatrixVectorSource<T>(newMatrix, newRow, newColumn);
-        return result;
-    }
-
-private:
-    size_t m_row, m_column;
-
-    std::vector<std::vector<T>> m_matrix;
-
-    std::vector<std::vector<T>> &getMatrix();
+enum OperatorType {
+    addType, minusType, multiplyType
 };
 
-#endif //_WEEK04_KMATRIX_H_
+template<typename T>
+class KMatrix {
+public:
+    // TODO
+//    virtual KMatrixIterator<T> begin() = 0;
+//    virtual KMatrixIterator<T> begin() = 0;
+
+    size_t getRows();
+    size_t getCols();
+
+    virtual void setData(size_t row, size_t col, T value) = 0;
+    virtual T getData(size_t row, size_t col) const = 0;
+    virtual T &getDataRef(size_t row, size_t col) = 0;
+    virtual T *getDataPoint(size_t row, size_t col) = 0;
+
+    virtual void eraseRow(size_t row) = 0;
+    virtual void eraseColumns(size_t col) = 0;
+
+    virtual KMatrix<T> *getRightPointer(size_t row, size_t col) const = 0;
+
+    void print() const;
+
+    void judgeRowCol(size_t row, size_t col) const;
+
+    KMatrix<T> *transposeBase() const;
+
+    KMatrix<T> *operation(KMatrix<T> const &other, OperatorType opeType);
+
+    // TODO 如果接口类声明运算符重载方法，可以实现底层存储逻辑不同的矩阵的运算，但是只能返回父类指针，不能实现连加操作，后续等待寻找更好的解决办法
+//    virtual KMatrix<T>* operator+(KMatrix<T> const &other) = 0;
+//    virtual KMatrix<T>* operator-(KMatrix<T> const &other) = 0;
+//    virtual KMatrix<T>* operator*(KMatrix<T> const &other) = 0;
+//    virtual KMatrix<T>* transposeBase() const = 0;
+
+protected:
+    size_t m_row{}, m_column{};
+};
+
+template<typename T>
+size_t KMatrix<T>::getRows() { return m_row; }
+
+template<typename T>
+size_t KMatrix<T>::getCols() { return m_column; }
+
+template<typename T>
+void KMatrix<T>::print() const {
+    for (size_t i = 0; i < KMatrix<T>::m_row; i++) {
+        for (size_t j = 0; j < KMatrix<T>::m_column; j++) {
+            std::cout << getData(i, j) << "\t";
+        }
+        std::cout << std::endl;
+    }
+}
+
+template<typename T>
+void KMatrix<T>::judgeRowCol(size_t row, size_t col) const {
+    if (row < 0 || row >= m_row || col < 0 || col >= m_column) {
+        throw std::out_of_range("越界错误！");
+    }
+}
+
+template<typename T>
+KMatrix<T> *KMatrix<T>::transposeBase() const {
+    // 交换行列值
+    KMatrix<T> *res = getRightPointer(m_column, m_row);
+    for (size_t i = 0; i < KMatrix<T>::m_row; ++i) {
+        for (size_t j = 0; j < KMatrix<T>::m_column; ++j) {
+            res->setData(j, i, getData(i, j));
+        }
+    }
+    return res;
+}
+
+template<typename T>
+KMatrix<T> *KMatrix<T>::operation(const KMatrix<T> &other, OperatorType opeType) {
+    int row = other.m_row, column = other.m_column;
+    KMatrix<T> *res;
+    switch (opeType) {
+        case addType:
+        case minusType: {
+            if (m_row != row || m_column != column) {
+                throw std::invalid_argument("矩阵结构不能加减");
+            }
+            res = getRightPointer(row, column);
+            for (size_t i = 0; i < row; ++i) {
+                for (size_t j = 0; j < column; ++j) {
+                    if (opeType == addType) {
+                        res->setData(i, j, getData(i, j) + other.getData(i, j));
+                    } else if (opeType == minusType) {
+                        res->setData(i, j, getData(i, j) - other.getData(i, j));
+                    }
+                }
+            }
+            break;
+        }
+        case multiplyType: {
+            if (m_row != column || m_column != row) {
+                throw std::invalid_argument("矩阵结构不能相乘");
+            }
+            res = getRightPointer(m_row, column);
+            for (size_t i = 0; i < KMatrix<T>::m_row; ++i) {
+                for (size_t j = 0; j < column; ++j) {
+                    T data = 0;
+                    for (size_t k = 0; k < KMatrix<T>::m_column; ++k) {
+                        data += getData(i, k) * other.getData(k, j);
+                    }
+                    res->setData(i, j, data);
+                }
+            }
+            break;
+        }
+        default:
+            res = getRightPointer(0, 0);
+    }
+    return res;
+}
+
+#endif // _WEEK04_KMATRIX_BASE_H_

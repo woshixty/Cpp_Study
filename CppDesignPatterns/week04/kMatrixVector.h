@@ -5,89 +5,144 @@
 #ifndef _WEEK04_KMATRIXVECTOR_H_
 #define _WEEK04_KMATRIXVECTOR_H_
 
-#include "kMatrixBase.h"
-#include "kMatrixMap.h"
-#include <iostream>
+#include "kMatrix.h"
+#include "kMatrixIterator.h"
 #include <vector>
 
 template<typename T>
-class KMatrixVector : public KMatrixBase<T> {
+class KMatrixVector : public KMatrix<T> {
 public:
     using matrix = std::vector<std::vector<T>>;
+    using iterator = KMatrixIterator<T>;
 
-    KMatrixVector() : KMatrixBase<T>::m_row(0),
-                      KMatrixBase<T>::m_column(0) {}
+    iterator begin();
+    iterator end();
 
-    KMatrixVector(size_t row, size_t column, T data = 0) {
-        KMatrixBase<T>::m_row = row;
-        KMatrixBase<T>::m_column = column;
-        for (int i = 0; i < KMatrixBase<T>::m_row; ++i) {
-            m_matrix.push_back(std::vector<T>(KMatrixBase<T>::m_column, data));
-        }
-    }
+    KMatrixVector() : KMatrix<T>::m_row(0),
+                      KMatrix<T>::m_column(0) {}
+    KMatrixVector(size_t row, size_t column, T data = 0);
+    KMatrixVector(KMatrixVector const &other);
 
-    KMatrixVector(KMatrixVector const &other) : m_matrix(other.m_matrix) {
-        KMatrixBase<T>::m_row = other.m_row;
-        KMatrixBase<T>::m_column = other.m_column;
-    }
+    void setData(size_t row, size_t col, T value) override;
+    T getData(size_t row, size_t col) const override;
+    T &getDataRef(size_t row, size_t col) override;
+    T *getDataPoint(size_t row, size_t col) override;
 
-    void setData(size_t row, size_t col, T value) override {
-        KMatrixBase<T>::judgeRowCol(row, col);
-        m_matrix[row][col] = value;
-    }
+    void eraseRow(size_t row) override;
+    void eraseColumns(size_t col) override;
 
-    T getData(size_t row, size_t col) const override {
-        KMatrixBase<T>::judgeRowCol(row, col);
-        return m_matrix[row][col];
-    }
+    KMatrix<T> *getRightPointer(size_t row, size_t col) const override;
 
-    void eraseRow(size_t row) override {
-        KMatrixBase<T>::judgeRowCol(row, 0);
-        m_matrix.erase(m_matrix.begin() + row);
-        KMatrixBase<T>::m_row--;
-    }
+    KMatrixVector<T> &operator=(KMatrixVector<T> const &other);
+    KMatrixVector<T> operator+(KMatrixVector<T> const &other);
+    KMatrixVector<T> operator-(KMatrixVector<T> const &other);
+    KMatrixVector<T> operator*(KMatrixVector<T> const &other);
 
-    void eraseColumns(size_t col) override {
-        KMatrixBase<T>::judgeRowCol(0, col);
-        for (int i = 0; i < KMatrixBase<T>::m_row; ++i) {
-            m_matrix[i].erase(m_matrix[i].begin() + col);
-        }
-        KMatrixBase<T>::m_column--;
-    }
-
-    KMatrixBase<T> *getRightPointer(size_t row, size_t col) const override {
-        return new KMatrixVector<T>(row, col);
-    }
-
-    KMatrixVector<T> &operator=(KMatrixVector<T> const &other) {
-        KMatrixBase<T>::m_row = other.KMatrixBase<T>::m_row;
-        KMatrixBase<T>::m_column = other.KMatrixBase<T>::m_column;
-        m_matrix = other.m_matrix;
-    }
-
-    KMatrixVector<T> operator+(KMatrixVector<T> const &other) {
-        auto * res = dynamic_cast<KMatrixVector<T> *>(KMatrixBase<T>::operation(other, addType));
-        return *res;
-    }
-
-    KMatrixVector<T> operator-(KMatrixVector<T> const &other) {
-        auto * res = dynamic_cast<KMatrixVector<T> *>(KMatrixBase<T>::operation(other, minusType));
-        return *res;
-    }
-
-    KMatrixVector<T> operator*(KMatrixVector<T> const &other) {
-        auto * res = dynamic_cast<KMatrixVector<T> *>(KMatrixBase<T>::operation(other, multiplyType));
-        return *res;
-    }
-
-    KMatrixVector<T> transpose() const {
-        auto * res = dynamic_cast<KMatrixVector<T> *>(KMatrixBase<T>::transposeBase());
-        return *res;
-    }
+    KMatrixVector<T> transpose() const;
 
 private:
     matrix m_matrix;
 };
+
+template<typename T>
+KMatrixIterator<T> KMatrixVector<T>::begin() { return KMatrixIterator<T>(0, 0, this); }
+
+template<typename T>
+KMatrixIterator<T> KMatrixVector<T>::end() {
+    size_t row = KMatrix<T>::getRows();
+    return KMatrixIterator<T>(row, 0, this);
+}
+
+template<typename T>
+KMatrixVector<T>::KMatrixVector(size_t row, size_t column, T data) {
+    KMatrix<T>::m_row = row;
+    KMatrix<T>::m_column = column;
+    for (int i = 0; i < KMatrix<T>::m_row; ++i) {
+        m_matrix.push_back(std::vector<T>(KMatrix<T>::m_column, data));
+    }
+}
+
+template<typename T>
+KMatrixVector<T>::KMatrixVector(const KMatrixVector &other): m_matrix(other.m_matrix) {
+    KMatrix<T>::m_row = other.m_row;
+    KMatrix<T>::m_column = other.m_column;
+}
+
+template<typename T>
+void KMatrixVector<T>::setData(size_t row, size_t col, T value) {
+    KMatrix<T>::judgeRowCol(row, col);
+    m_matrix[row][col] = value;
+}
+
+template<typename T>
+T KMatrixVector<T>::getData(size_t row, size_t col) const {
+    KMatrix<T>::judgeRowCol(row, col);
+    return m_matrix[row][col];
+}
+
+template<typename T>
+T &KMatrixVector<T>::getDataRef(size_t row, size_t col) {
+    KMatrix<T>::judgeRowCol(row, col);
+    return m_matrix[row][col];
+}
+
+template<typename T>
+T *KMatrixVector<T>::getDataPoint(size_t row, size_t col) {
+    KMatrix<T>::judgeRowCol(row, col);
+    return &m_matrix[row][col];
+}
+
+template<typename T>
+void KMatrixVector<T>::eraseRow(size_t row) {
+    KMatrix<T>::judgeRowCol(row, 0);
+    m_matrix.erase(m_matrix.begin() + row);
+    KMatrix<T>::m_row--;
+}
+
+template<typename T>
+void KMatrixVector<T>::eraseColumns(size_t col) {
+    KMatrix<T>::judgeRowCol(0, col);
+    for (int i = 0; i < KMatrix<T>::m_row; ++i) {
+        m_matrix[i].erase(m_matrix[i].begin() + col);
+    }
+    KMatrix<T>::m_column--;
+}
+
+template<typename T>
+KMatrix<T> *KMatrixVector<T>::getRightPointer(size_t row, size_t col) const {
+    return new KMatrixVector<T>(row, col);
+}
+
+template<typename T>
+KMatrixVector<T> &KMatrixVector<T>::operator=(const KMatrixVector<T> &other) {
+    KMatrix<T>::m_row = other.KMatrix<T>::m_row;
+    KMatrix<T>::m_column = other.KMatrix<T>::m_column;
+    m_matrix = other.m_matrix;
+}
+
+template<typename T>
+KMatrixVector<T> KMatrixVector<T>::operator+(const KMatrixVector<T> &other) {
+    auto *res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, addType));
+    return *res;
+}
+
+template<typename T>
+KMatrixVector<T> KMatrixVector<T>::operator-(const KMatrixVector<T> &other) {
+    auto *res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, minusType));
+    return *res;
+}
+
+template<typename T>
+KMatrixVector<T> KMatrixVector<T>::operator*(const KMatrixVector<T> &other) {
+    auto *res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::operation(other, multiplyType));
+    return *res;
+}
+
+template<typename T>
+KMatrixVector<T> KMatrixVector<T>::transpose() const {
+    auto *res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::transposeBase());
+    return *res;
+}
 
 
 #endif

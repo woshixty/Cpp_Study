@@ -463,10 +463,14 @@
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/TestVector.cpp">
 			<Option target="testVector"/>
 		</Unit>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kIterator.h">
+			<Option target="testMap"/>
+		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrix.h">
+			<Option target="testVector"/>
 			<Option target="week04"/>
 		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixBase.h">
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixIterator.h">
 			<Option target="week04"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h">
