@@ -1,6 +1,10 @@
-//
-// Created by 谢庭宇 on 2022/5/22.
-//
+// -------------------------------------------------------
+// kMatrixIterator.h
+// 创建者： xie tingyu
+// 创建时间： 2022/5/21
+// 功能描述： matrix的自定义迭代器
+// Copyright 2013 Kingsoft
+// --------------------------------------------------------
 
 #ifndef _WEEK04_KMATRIX_ITERATOR_H_
 #define _WEEK04_KMATRIX_ITERATOR_H_
@@ -9,7 +13,8 @@
 #include "kMatrix.h"
 
 template<typename T>
-class KMatrixIterator {
+class KMatrixIterator
+{
 public:
     // 迭代器相关属性
     using iterator_category = std::forward_iterator_tag;
@@ -49,8 +54,10 @@ private:
 };
 
 template<typename T>
-KMatrixIterator<T> &KMatrixIterator<T>::operator=(const KMatrixIterator<T> &other) {
-    if (other != *this) {
+KMatrixIterator<T> &KMatrixIterator<T>::operator=(const KMatrixIterator<T> &other)
+{
+    if (other != *this)
+    {
         m_curRow = other.row;
         m_curColumn = other.column;
         m_matrix = other.m_matrix;
@@ -64,27 +71,32 @@ template<typename T>
 size_t KMatrixIterator<T>::getCurColumn() const { return m_curColumn; }
 
 template<typename T>
-bool KMatrixIterator<T>::operator==(const KMatrixIterator<T> &other) const {
+bool KMatrixIterator<T>::operator==(const KMatrixIterator<T> &other) const
+{
     return m_curRow == other.m_curRow && m_curColumn == other.m_curColumn && m_matrix == other.m_matrix;
 }
 
 template<typename T>
-bool KMatrixIterator<T>::operator!=(const KMatrixIterator<T> &other) const {
-    return m_curRow != other.m_curRow || m_curColumn != other.m_curColumn || m_matrix != other.m_matrix;;
+bool KMatrixIterator<T>::operator!=(const KMatrixIterator<T> &other) const
+{
+    return m_curRow != other.m_curRow || m_curColumn != other.m_curColumn || m_matrix != other.m_matrix;
 }
 
 template<typename T>
-T &KMatrixIterator<T>::operator*() const {
+T &KMatrixIterator<T>::operator*() const
+{
     return m_matrix->getDataRef(m_curRow, m_curColumn);
 }
 
 template<typename T>
-T *KMatrixIterator<T>::operator->() const {
+T *KMatrixIterator<T>::operator->() const
+{
     return m_matrix->getDataPoint(m_curRow, m_curColumn);
 }
 
 template<typename T>
-KMatrixIterator<T> &KMatrixIterator<T>::operator++() {
+KMatrixIterator<T> &KMatrixIterator<T>::operator++()
+{
     m_curColumn++;
     m_curRow += m_curColumn / m_matrix->getCols();
     m_curColumn %= m_matrix->getCols();
@@ -92,13 +104,18 @@ KMatrixIterator<T> &KMatrixIterator<T>::operator++() {
 }
 
 template<typename T>
-KMatrixIterator<T> &KMatrixIterator<T>::operator--() {
+KMatrixIterator<T> &KMatrixIterator<T>::operator--()
+{
     m_curColumn--;
-    if (m_curColumn < 0) {
-        if (m_curRow > 0) {
+    if (m_curColumn < 0)
+    {
+        if (m_curRow > 0)
+        {
             m_curRow--;
             m_curColumn = m_matrix->getCols() - 1;
-        } else {
+        }
+        else
+        {
             m_curColumn = 0;
             m_curRow = 0;
         }

@@ -1,6 +1,10 @@
-//
-// Created by 谢庭宇 on 2022/5/18.
-//
+// -------------------------------------------------------
+// TestMap.cpp
+// 创建者： xie tingyu
+// 创建时间： 2022/5/21
+// 功能描述： 测试类的相关功能
+// Copyright 2013 Kingsoft
+// --------------------------------------------------------
 
 #ifndef _WEEK04_KMATRIX_MAP_H_
 #define _WEEK04_KMATRIX_MAP_H_
@@ -10,7 +14,8 @@
 #include <map>
 
 template<typename T>
-class KMatrixMap : public KMatrix<T> {
+class KMatrixMap : public KMatrix<T>
+{
 public:
     using matrix = std::map<std::pair<int, int>, T>;
     using int_pair = std::pair<int, int>;
@@ -21,7 +26,7 @@ public:
 
     KMatrixMap() : KMatrix<T>::m_row(0), KMatrix<T>::m_column(0) {}
     KMatrixMap(size_t row, size_t column, T data = 0);
-    KMatrixMap(KMatrixMap<T> &other);
+    KMatrixMap(KMatrixMap<T> const &other);
 
     void setData(size_t row, size_t col, T value) override;
     T getData(size_t row, size_t col) const override;
@@ -51,12 +56,16 @@ template<typename T>
 KMatrixIterator<T> KMatrixMap<T>::end() { return KMatrixIterator<T>(KMatrix<T>::m_row, 0, this); }
 
 template<typename T>
-KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T data) {
+KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T data)
+{
     KMatrix<T>::m_row = row;
     KMatrix<T>::m_column = column;
-    if (data != (T) 0) {
-        for (int i = 0; i < KMatrix<T>::m_row; ++i) {
-            for (int j = 0; j < KMatrix<T>::m_column; ++j) {
+    if (data != (T) 0)
+    {
+        for (int i = 0; i < KMatrix<T>::m_row; ++i)
+        {
+            for (int j = 0; j < KMatrix<T>::m_column; ++j)
+            {
                 m_matrix[int_pair(i, j)] = data;
             }
         }
@@ -64,110 +73,137 @@ KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T data) {
 }
 
 template<typename T>
-KMatrixMap<T>::KMatrixMap(KMatrixMap<T> &other) {
+KMatrixMap<T>::KMatrixMap(KMatrixMap<T> const &other)
+{
     KMatrix<T>::m_row = other.m_row;
-    KMatrix<T>::m_column = other.m_row;
+    KMatrix<T>::m_column = other.m_column;
     m_matrix = other.m_matrix;
 }
 
 template<typename T>
-void KMatrixMap<T>::setData(size_t row, size_t col, T value) {
+void KMatrixMap<T>::setData(size_t row, size_t col, T value)
+{
     KMatrix<T>::judgeRowCol(row, col);
-    if (value != (T) 0) {
+    if (value != (T) 0)
         m_matrix[int_pair(row, col)] = value;
-    }
 }
 
 template<typename T>
-T KMatrixMap<T>::getData(size_t row, size_t col) const {
+T KMatrixMap<T>::getData(size_t row, size_t col) const
+{
     KMatrix<T>::judgeRowCol(row, col);
-    if (m_matrix.find(int_pair(row, col)) == m_matrix.end()) {
+    if (m_matrix.find(int_pair(row, col)) == m_matrix.end())
+    {
         return 0;
-    } else {
+    }
+    else
+    {
         return m_matrix.find(int_pair(row, col))->second;
     }
 }
 
 template<typename T>
-T &KMatrixMap<T>::getDataRef(size_t row, size_t col) {
+T &KMatrixMap<T>::getDataRef(size_t row, size_t col)
+{
     KMatrix<T>::judgeRowCol(row, col);
-    if (m_matrix.find(int_pair(row, col)) == m_matrix.end()) {
-        return 0;
-    } else {
+    if (m_matrix.find(int_pair(row, col)) == m_matrix.end())
+    {
+        T data = 0;
+        return data;
+    }
+    else
+    {
         return m_matrix.find(int_pair(row, col))->second;
     }
 }
 
 template<typename T>
-T *KMatrixMap<T>::getDataPoint(size_t row, size_t col) {
+T *KMatrixMap<T>::getDataPoint(size_t row, size_t col)
+{
     KMatrix<T>::judgeRowCol(row, col);
-    if (m_matrix.find(int_pair(row, col)) == m_matrix.end()) {
-        return 0;
-    } else {
+    if (m_matrix.find(int_pair(row, col)) == m_matrix.end())
+    {
+        T data = 0;
+        return &data;
+    }
+    else
+    {
         return &m_matrix.find(int_pair(row, col))->second;
     }
 }
 
 template<typename T>
-void KMatrixMap<T>::eraseRow(size_t row) {
+void KMatrixMap<T>::eraseRow(size_t row)
+{
     KMatrix<T>::judgeRowCol(row, 0);
     typename matrix::iterator it;
-    for (it = m_matrix.begin(); it != m_matrix.end(); ++it) {
+    for (it = m_matrix.begin(); it != m_matrix.end(); ++it)
+    {
         int_pair key = it->first;
         m_matrix[int_pair(key.first - 1, key.second)] = it->second;
     }
-    for (int i = 0; i < KMatrix<T>::m_column; ++i) {
+    for (int i = 0; i < KMatrix<T>::m_column; ++i)
+    {
         m_matrix.erase(int_pair(KMatrix<T>::m_row - 1, i));
     }
     KMatrix<T>::m_row--;
 }
 
 template<typename T>
-void KMatrixMap<T>::eraseColumns(size_t col) {
+void KMatrixMap<T>::eraseColumns(size_t col)
+{
     KMatrix<T>::judgeRowCol(0, col);
     typename matrix::iterator it;
-    for (it = m_matrix.begin(); it != m_matrix.end(); ++it) {
+    for (it = m_matrix.begin(); it != m_matrix.end(); ++it)
+    {
         int_pair key = it->first;
         m_matrix[int_pair(key.first, key.second - 1)] = it->second;
     }
-    for (int i = 0; i < KMatrix<T>::m_row; ++i) {
+    for (int i = 0; i < KMatrix<T>::m_row; ++i)
+    {
         m_matrix.erase(int_pair(i, KMatrix<T>::m_column - 1));
     }
     KMatrix<T>::m_column--;
 }
 
 template<typename T>
-KMatrix<T> *KMatrixMap<T>::getRightPointer(size_t row, size_t col) const {
+KMatrix<T> *KMatrixMap<T>::getRightPointer(size_t row, size_t col) const
+{
     return new KMatrixMap<T>(row, col);
 }
 
 template<typename T>
-KMatrixMap<T> &KMatrixMap<T>::operator=(const KMatrixMap<T> &other) {
+KMatrixMap<T> &KMatrixMap<T>::operator=(const KMatrixMap<T> &other)
+{
     KMatrix<T>::m_row = other.KMatrix<T>::m_row;
     KMatrix<T>::m_column = other.KMatrix<T>::m_column;
     m_matrix = other.m_matrix;
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::operator+(const KMatrixMap<T> &other) {
+KMatrixMap<T> KMatrixMap<T>::operator+(const KMatrixMap<T> &other)
+{
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, addType));
     return *res;
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::operator-(const KMatrixMap<T> &other) {
+KMatrixMap<T> KMatrixMap<T>::operator-(const KMatrixMap<T> &other)
+{
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, minusType));
     return *res;
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::operator*(const KMatrixMap<T> &other) {
+KMatrixMap<T> KMatrixMap<T>::operator*(const KMatrixMap<T> &other)
+{
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, multiplyType));
     return *res;
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::transpose() const {
+KMatrixMap<T> KMatrixMap<T>::transpose() const
+{
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::transposeBase());
     return *res;
 }
