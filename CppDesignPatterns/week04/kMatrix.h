@@ -63,6 +63,8 @@ public:
      */
     KMatrix<T> *operation(KMatrix<T> const &other, OperatorType opeType);
 
+    bool sameMatrix(KMatrix<T> const &other);
+
     // TODO 如果接口类声明运算符重载方法，可以实现底层存储逻辑不同的矩阵的运算，但是只能返回父类指针，不能实现连加操作，后续等待寻找更好的解决办法
     //  virtual KMatrix<T>* operator+(KMatrix<T> const &other) = 0;
     //  virtual KMatrix<T>* operator-(KMatrix<T> const &other) = 0;
@@ -161,6 +163,22 @@ KMatrix<T> *KMatrix<T>::operation(const KMatrix<T> &other, OperatorType opeType)
             res = getRightPointer(0, 0);
     }
     return res;
+}
+
+template<typename T>
+bool KMatrix<T>::sameMatrix(const KMatrix<T> &other)
+{
+    if(m_row != other.m_row || m_column != other.m_column)
+        return false;
+    for (int i = 0; i < m_row; ++i)
+    {
+        for (int j = 0; j < m_column; ++j)
+        {
+            if(getData(i, j) != other.getData(i, j))
+                return false;
+        }
+    }
+    return true;
 }
 
 #endif // _WEEK04_KMATRIX_BASE_H_

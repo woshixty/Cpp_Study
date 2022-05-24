@@ -27,6 +27,9 @@ public:
                       KMatrix<T>::m_column(0) {}
     KMatrixVector(size_t row, size_t column, T data = 0);
     KMatrixVector(KMatrixVector const &other);
+    // 使用数组构造矩阵
+    KMatrixVector(size_t row, size_t column, T *src);
+    ~KMatrixVector() { m_matrix.clear(); }
 
     void setData(size_t row, size_t col, T value) override;
     T getData(size_t row, size_t col) const override;
@@ -42,6 +45,8 @@ public:
     KMatrixVector<T> operator+(KMatrixVector<T> const &other);
     KMatrixVector<T> operator-(KMatrixVector<T> const &other);
     KMatrixVector<T> operator*(KMatrixVector<T> const &other);
+
+    bool operator==(KMatrixVector<T> &other);
 
     KMatrixVector<T> transpose() const;
 
@@ -75,6 +80,17 @@ KMatrixVector<T>::KMatrixVector(const KMatrixVector &other): m_matrix(other.m_ma
 {
     KMatrix<T>::m_row = other.m_row;
     KMatrix<T>::m_column = other.m_column;
+}
+
+template<typename T>
+KMatrixVector<T>::KMatrixVector(size_t row, size_t column, T *src)
+{
+    size_t base = 0;
+    for (size_t i = 0; i < row; ++i) {
+        // 将第i行数据拷贝进去
+        m_matrix.push_back(std::vector<T>(&src[base], &src[base + column]));
+        base += column;
+    }
 }
 
 template<typename T>
@@ -164,6 +180,11 @@ KMatrixVector<T> KMatrixVector<T>::transpose() const
 {
     auto *res = dynamic_cast<KMatrixVector<T> *>(KMatrix<T>::transposeBase());
     return *res;
+}
+
+template<typename T>
+bool KMatrixVector<T>::operator==(KMatrixVector<T> &other) {
+    return KMatrix<T>::sameMatrix(other);
 }
 
 

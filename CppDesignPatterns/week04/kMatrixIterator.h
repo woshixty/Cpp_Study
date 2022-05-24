@@ -19,7 +19,7 @@ public:
     // 迭代器相关属性
     using iterator_category = std::forward_iterator_tag;
     using difference_type = std::ptrdiff_t;
-    using value_type = T;
+    using value = T;
     using reference = T &;
     using pointer = T *;
 
@@ -41,6 +41,7 @@ public:
     bool operator==(KMatrixIterator<T> const &other) const;
     bool operator!=(KMatrixIterator<T> const &other) const;
 
+    value get() { return m_matrix->getData(m_curRow, m_curColumn); };
     reference operator*() const;
     pointer operator->() const;
 

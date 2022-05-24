@@ -1,8 +1,8 @@
 // -------------------------------------------------------
-// TestMap.cpp
+// kMatrixMap.cpp
 // 创建者： xie tingyu
 // 创建时间： 2022/5/21
-// 功能描述： 测试类的相关功能
+// 功能描述：
 // Copyright 2013 Kingsoft
 // --------------------------------------------------------
 
@@ -27,6 +27,7 @@ public:
     KMatrixMap() : KMatrix<T>::m_row(0), KMatrix<T>::m_column(0) {}
     KMatrixMap(size_t row, size_t column, T data = 0);
     KMatrixMap(KMatrixMap<T> const &other);
+    ~KMatrixMap() { m_matrix.clear(); }
 
     void setData(size_t row, size_t col, T value) override;
     T getData(size_t row, size_t col) const override;
@@ -42,6 +43,8 @@ public:
     KMatrixMap<T> operator+(KMatrixMap<T> const &other);
     KMatrixMap<T> operator-(KMatrixMap<T> const &other);
     KMatrixMap<T> operator*(KMatrixMap<T> const &other);
+
+    bool operator==(KMatrixMap<T> &other);
 
     KMatrixMap<T> transpose() const;
 
@@ -108,13 +111,9 @@ T &KMatrixMap<T>::getDataRef(size_t row, size_t col)
     KMatrix<T>::judgeRowCol(row, col);
     if (m_matrix.find(int_pair(row, col)) == m_matrix.end())
     {
-        T data = 0;
-        return data;
+        m_matrix[int_pair(row, col)] = 0;
     }
-    else
-    {
-        return m_matrix.find(int_pair(row, col))->second;
-    }
+    return m_matrix.find(int_pair(row, col))->second;
 }
 
 template<typename T>
@@ -123,13 +122,9 @@ T *KMatrixMap<T>::getDataPoint(size_t row, size_t col)
     KMatrix<T>::judgeRowCol(row, col);
     if (m_matrix.find(int_pair(row, col)) == m_matrix.end())
     {
-        T data = 0;
-        return &data;
+        m_matrix[int_pair(row, col)] = 0;
     }
-    else
-    {
-        return &m_matrix.find(int_pair(row, col))->second;
-    }
+    return &m_matrix.find(int_pair(row, col))->second;
 }
 
 template<typename T>
@@ -199,6 +194,12 @@ KMatrixMap<T> KMatrixMap<T>::operator*(const KMatrixMap<T> &other)
 {
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, multiplyType));
     return *res;
+}
+
+template<typename T>
+bool KMatrixMap<T>::operator==(KMatrixMap<T> &other)
+{
+    return KMatrix<T>::sameMatrix(other);
 }
 
 template<typename T>

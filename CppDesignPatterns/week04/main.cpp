@@ -73,4 +73,6 @@ int main() {
     cout << "kMatrix3 * KMatrixVectorSource" << endl;
     (kMatrix3 * kMatrix)->print();
     cout << "---------" << endl << endl;
+
+
 }

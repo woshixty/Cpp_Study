@@ -9,25 +9,67 @@
 #include "kMatrixVector.h"
 #include "kMatrixIterator.h"
 
+using namespace std;
+
 int main()
 {
+    // 构造函数
     KMatrixVector<int> matrix(3, 3, 1);
-    KMatrixVector<int> matrix2(3, 3, 2);
-    ((matrix + matrix) + matrix - matrix2).print();
-    (matrix * matrix2 * matrix).print();
+    cout << "matrix ori" << endl;
+    matrix.print();
+    cout << "---------" << endl << endl;
 
-    KMatrixVector<int> matrix3(3, 1, 2);
-    matrix3.print();
-    matrix3.transpose().print();
-    (matrix3 * matrix3.transpose()).print();
-    (matrix3.transpose() * matrix3).print();
+    KMatrixVector<int> matrixCopy = matrix;
+    matrix.setData(0, 2, 9);
 
-    matrix2.setData(0, 0, 10);
-    matrix2.setData(1, 1, 15);
-    matrix2.setData(2, 2, 20);
-    KMatrixIterator<int> it = matrix2.begin();
-    for (; it != matrix2.end(); ++it)
-    {
-        std::cout << *it << std::endl;
+    KMatrixVector<int> matrixEraRow = matrix;
+    matrixEraRow.eraseRow(1);
+    KMatrixVector<int> matrixEraCol = matrix;
+    matrixEraCol.eraseColumns(1);
+
+    KMatrixVector<int> add = matrix + matrixCopy;
+    KMatrixVector<int> min = matrix - matrixCopy;
+    KMatrixVector<int> mul = matrixEraCol * matrixEraRow;
+
+    KMatrixVector<int> transpose = matrix.transpose();
+
+    cout << "matrix after" << endl;
+    matrix.print();
+    cout << "---------" << endl << endl;
+
+    cout << "matrixCopy" << endl;
+    matrixCopy.print();
+    cout << "---------" << endl << endl;
+
+    cout << "matrixEraRow" << endl;
+    matrixEraRow.print();
+    cout << "---------" << endl << endl;
+
+    cout << "matrixEraCol" << endl;
+    matrixEraCol.print();
+    cout << "---------" << endl << endl;
+
+    cout << "add" << endl;
+    add.print();
+    cout << "---------" << endl << endl;
+
+    cout << "min" << endl;
+    min.print();
+    cout << "---------" << endl << endl;
+
+    cout << "mul" << endl;
+    mul.print();
+    cout << "---------" << endl << endl;
+
+    cout << "transpose" << endl;
+    transpose.print();
+    cout << "---------" << endl << endl;
+
+    cout << "KMatrixIterator" << endl;
+    KMatrixIterator<int> it = matrix.begin();
+    for (; it != matrix.end(); ++it) {
+        cout << *it << " ";
     }
+    cout << endl;
+    cout << "---------" << endl << endl;
 }
