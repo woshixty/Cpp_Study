@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testBuilder
+
+# Build rule for target.
+testBuilder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testBuilder
+.PHONY : testBuilder
+
+# fast build rule for target.
+testBuilder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/build
+.PHONY : testBuilder/fast
+
+#=============================================================================
 # Target rules for targets named testMap
 
 # Build rule for target.
@@ -652,6 +665,33 @@ week03/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.s
 .PHONY : week03/main.cpp.s
 
+week04/TestBuilder.o: week04/TestBuilder.cpp.o
+.PHONY : week04/TestBuilder.o
+
+# target to build an object file
+week04/TestBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.o
+.PHONY : week04/TestBuilder.cpp.o
+
+week04/TestBuilder.i: week04/TestBuilder.cpp.i
+.PHONY : week04/TestBuilder.i
+
+# target to preprocess a source file
+week04/TestBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.i
+.PHONY : week04/TestBuilder.cpp.i
+
+week04/TestBuilder.s: week04/TestBuilder.cpp.s
+.PHONY : week04/TestBuilder.s
+
+# target to generate assembly for a file
+week04/TestBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.s
+.PHONY : week04/TestBuilder.cpp.s
+
 week04/TestMap.o: week04/TestMap.cpp.o
 .PHONY : week04/TestMap.o
 
@@ -736,6 +776,7 @@ help:
 	@echo "... cppDesignPatterns"
 	@echo "... factory"
 	@echo "... singleton"
+	@echo "... testBuilder"
 	@echo "... testMap"
 	@echo "... testVector"
 	@echo "... week03"
@@ -794,6 +835,9 @@ help:
 	@echo "... week03/main.o"
 	@echo "... week03/main.i"
 	@echo "... week03/main.s"
+	@echo "... week04/TestBuilder.o"
+	@echo "... week04/TestBuilder.i"
+	@echo "... week04/TestBuilder.s"
 	@echo "... week04/TestMap.o"
 	@echo "... week04/TestMap.i"
 	@echo "... week04/TestMap.s"

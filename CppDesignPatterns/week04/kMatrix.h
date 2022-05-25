@@ -38,6 +38,7 @@ public:
 
     virtual void eraseRow(size_t row) = 0;
     virtual void eraseColumns(size_t col) = 0;
+    virtual void clear(size_t row, size_t col) = 0;
 
     /**
      * 虚基类获得指向子类对象的指针
@@ -63,7 +64,19 @@ public:
      */
     KMatrix<T> *operation(KMatrix<T> const &other, OperatorType opeType);
 
+    /**
+     * 判断两个矩阵是否内容相同
+     * @param other
+     * @return
+     */
     bool sameMatrix(KMatrix<T> const &other);
+
+    /**
+     * 初始化行列并清除数据
+     * @param row
+     * @param column
+     */
+    void initialize(size_t row, size_t column);
 
     // TODO 如果接口类声明运算符重载方法，可以实现底层存储逻辑不同的矩阵的运算，但是只能返回父类指针，不能实现连加操作，后续等待寻找更好的解决办法
     //  virtual KMatrix<T>* operator+(KMatrix<T> const &other) = 0;
@@ -179,6 +192,14 @@ bool KMatrix<T>::sameMatrix(const KMatrix<T> &other)
         }
     }
     return true;
+}
+
+template<typename T>
+void KMatrix<T>::initialize(size_t row, size_t column)
+{
+    clear(row, column);
+    m_row = row;
+    m_column = column;
 }
 
 #endif // _WEEK04_KMATRIX_BASE_H_

@@ -11,6 +11,11 @@
 
 using namespace std;
 
+double b[4] = {
+        5, 6,
+        7, 8
+};
+
 int main()
 {
     // 构造函数
@@ -71,5 +76,12 @@ int main()
         cout << *it << " ";
     }
     cout << endl;
+    cout << "---------" << endl << endl;
+
+    cout << "arr" << endl;
+    KMatrixVector<double> arr1(1, 4, b);
+    KMatrixVector<double> arr2(4, 1, b);
+    arr1.print();
+    arr2.print();
     cout << "---------" << endl << endl;
 }

@@ -28,7 +28,7 @@ public:
     // 使用矩阵构造矩阵
     KMatrixVectorSource(std::vector<std::vector<T>> src, size_t row, size_t column);
 
-    // 初始化行列信息赋值为0
+    // 初始化行列并清除数据
     void initialize(size_t row, size_t column);
 
     // 初始化行列信息并赋值

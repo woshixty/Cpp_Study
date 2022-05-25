@@ -24,9 +24,12 @@ public:
     iterator begin();
     iterator end();
 
-    KMatrixMap() : KMatrix<T>::m_row(0), KMatrix<T>::m_column(0) {}
+    KMatrixMap();
     KMatrixMap(size_t row, size_t column, T data = 0);
     KMatrixMap(KMatrixMap<T> const &other);
+    // 使用数组构造矩阵
+    KMatrixMap(size_t row, size_t column, T *src);
+    KMatrixMap(size_t row, size_t column, matrix const &src);
     ~KMatrixMap() { m_matrix.clear(); }
 
     void setData(size_t row, size_t col, T value) override;
@@ -38,9 +41,10 @@ public:
     void eraseColumns(size_t col) override;
 
     KMatrix<T> *getRightPointer(size_t row, size_t col) const override;
+    void clear(size_t row, size_t col) override;
 
     KMatrixMap<T> &operator=(KMatrixMap<T> const &other);
-    KMatrixMap<T> operator+(KMatrixMap<T> const &other);
+    KMatrixMap<T> &operator+(KMatrixMap<T> const &other);
     KMatrixMap<T> operator-(KMatrixMap<T> const &other);
     KMatrixMap<T> operator*(KMatrixMap<T> const &other);
 
@@ -61,6 +65,8 @@ KMatrixIterator<T> KMatrixMap<T>::end() { return KMatrixIterator<T>(KMatrix<T>::
 template<typename T>
 KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T data)
 {
+    // 对模板泛型进行限制
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
     KMatrix<T>::m_row = row;
     KMatrix<T>::m_column = column;
     if (data != (T) 0)
@@ -78,9 +84,36 @@ KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T data)
 template<typename T>
 KMatrixMap<T>::KMatrixMap(KMatrixMap<T> const &other)
 {
+    // 对模板泛型进行限制
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
     KMatrix<T>::m_row = other.m_row;
     KMatrix<T>::m_column = other.m_column;
     m_matrix = other.m_matrix;
+}
+
+template<typename T>
+KMatrixMap<T>::KMatrixMap(size_t row, size_t column, T *src) {
+    // 对模板泛型进行限制
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
+    KMatrix<T>::m_row = row;
+    KMatrix<T>::m_column = column;
+    int point = 0;
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < column; ++j) {
+            if(src[point] != (T)0) {
+                m_matrix[int_pair(i, j)] = src[point++];
+            }
+        }
+    }
+}
+
+template<typename T>
+KMatrixMap<T>::KMatrixMap(size_t row, size_t column, KMatrixMap::matrix const &src) {
+    // 对模板泛型进行限制
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
+    KMatrix<T>::m_row = row;
+    KMatrix<T>::m_column = column;
+    m_matrix = src;
 }
 
 template<typename T>
@@ -168,15 +201,16 @@ KMatrix<T> *KMatrixMap<T>::getRightPointer(size_t row, size_t col) const
 }
 
 template<typename T>
-KMatrixMap<T> &KMatrixMap<T>::operator=(const KMatrixMap<T> &other)
+KMatrixMap<T> &KMatrixMap<T>::operator=(KMatrixMap<T> const &other)
 {
     KMatrix<T>::m_row = other.KMatrix<T>::m_row;
     KMatrix<T>::m_column = other.KMatrix<T>::m_column;
     m_matrix = other.m_matrix;
+    return *this;
 }
 
 template<typename T>
-KMatrixMap<T> KMatrixMap<T>::operator+(const KMatrixMap<T> &other)
+KMatrixMap<T> &KMatrixMap<T>::operator+(const KMatrixMap<T> &other)
 {
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::operation(other, addType));
     return *res;
@@ -207,6 +241,18 @@ KMatrixMap<T> KMatrixMap<T>::transpose() const
 {
     auto * res = dynamic_cast<KMatrixMap<T> *>(KMatrix<T>::transposeBase());
     return *res;
+}
+
+template<typename T>
+void KMatrixMap<T>::clear(size_t row, size_t col)
+{
+    m_matrix.clear();
+}
+
+template<typename T>
+KMatrixMap<T>::KMatrixMap() : KMatrix<T>::m_row(0), KMatrix<T>::m_column(0) {
+    // 对模板泛型进行限制
+    static_assert(std::is_same<T, int>::value || std::is_same<T, double>::value, "not allowed");
 }
 
 

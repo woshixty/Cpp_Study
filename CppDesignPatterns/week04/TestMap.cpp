@@ -9,6 +9,11 @@
 #include "kMatrixMap.h"
 #include <iostream>
 
+double arr[4] = {
+        5, 6,
+        7, 8
+};
+
 using namespace std;
 int main()
 {
@@ -26,7 +31,7 @@ int main()
     KMatrixMap<int> matrixEraCol = matrix;
     matrixEraCol.eraseColumns(1);
 
-    KMatrixMap<int> add = matrix + matrixCopy;
+    KMatrixMap<int> add = matrix + matrixCopy + matrixCopy;
     KMatrixMap<int> min = matrix - matrixCopy;
     KMatrixMap<int> mul = matrixEraCol * matrixEraRow;
 
@@ -77,5 +82,11 @@ int main()
     KMatrixMap<int> b(3, 4, 6);
     bool f = a == b;
     cout << f << endl;
+    cout << "---------" << endl << endl;
+
+    cout << "数组" << endl;
+    KMatrixMap<double> arr1(1, 4, arr);
+    KMatrixMap<double> arr2(4, 1, arr);
+    arr1.print();arr2.print();
     cout << "---------" << endl << endl;
 }
