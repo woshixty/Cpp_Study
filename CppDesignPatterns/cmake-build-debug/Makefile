@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-bu
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -84,6 +74,16 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,17 +117,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named builder
+# Target rules for targets named testBuilder
 
 # Build rule for target.
-builder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 builder
-.PHONY : builder
+testBuilder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testBuilder
+.PHONY : testBuilder
 
 # fast build rule for target.
-builder/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
-.PHONY : builder/fast
+testBuilder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/build
+.PHONY : testBuilder/fast
+
+#=============================================================================
+# Target rules for targets named testMap
+
+# Build rule for target.
+testMap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testMap
+.PHONY : testMap
+
+# fast build rule for target.
+testMap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/build
+.PHONY : testMap/fast
+
+#=============================================================================
+# Target rules for targets named testVector
+
+# Build rule for target.
+testVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testVector
+.PHONY : testVector
+
+# fast build rule for target.
+testVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/build
+.PHONY : testVector/fast
+
+#=============================================================================
+# Target rules for targets named singleton
+
+# Build rule for target.
+singleton: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 singleton
+.PHONY : singleton
+
+# fast build rule for target.
+singleton/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/build
+.PHONY : singleton/fast
 
 #=============================================================================
 # Target rules for targets named week03
@@ -143,6 +182,19 @@ week03/fast:
 .PHONY : week03/fast
 
 #=============================================================================
+# Target rules for targets named builder
+
+# Build rule for target.
+builder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 builder
+.PHONY : builder
+
+# fast build rule for target.
+builder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/builder.dir/build.make CMakeFiles/builder.dir/build
+.PHONY : builder/fast
+
+#=============================================================================
 # Target rules for targets named factory
 
 # Build rule for target.
@@ -156,17 +208,30 @@ factory/fast:
 .PHONY : factory/fast
 
 #=============================================================================
-# Target rules for targets named CppDesignPatterns
+# Target rules for targets named week04
 
 # Build rule for target.
-CppDesignPatterns: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CppDesignPatterns
-.PHONY : CppDesignPatterns
+week04: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week04
+.PHONY : week04
 
 # fast build rule for target.
-CppDesignPatterns/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/build
-.PHONY : CppDesignPatterns/fast
+week04/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
+.PHONY : week04/fast
+
+#=============================================================================
+# Target rules for targets named cppDesignPatterns
+
+# Build rule for target.
+cppDesignPatterns: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cppDesignPatterns
+.PHONY : cppDesignPatterns
+
+# fast build rule for target.
+cppDesignPatterns/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/build
+.PHONY : cppDesignPatterns/fast
 
 builder/Builder.o: builder/Builder.cpp.o
 .PHONY : builder/Builder.o
@@ -341,7 +406,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -349,7 +414,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -357,8 +422,32 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppDesignPatterns.dir/build.make CMakeFiles/CppDesignPatterns.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppDesignPatterns.dir/build.make CMakeFiles/cppDesignPatterns.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+singleton/Singleton.o: singleton/Singleton.cpp.o
+.PHONY : singleton/Singleton.o
+
+# target to build an object file
+singleton/Singleton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.o
+.PHONY : singleton/Singleton.cpp.o
+
+singleton/Singleton.i: singleton/Singleton.cpp.i
+.PHONY : singleton/Singleton.i
+
+# target to preprocess a source file
+singleton/Singleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.i
+.PHONY : singleton/Singleton.cpp.i
+
+singleton/Singleton.s: singleton/Singleton.cpp.s
+.PHONY : singleton/Singleton.s
+
+# target to generate assembly for a file
+singleton/Singleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.s
+.PHONY : singleton/Singleton.cpp.s
 
 week03/Compoundshape.o: week03/Compoundshape.cpp.o
 .PHONY : week03/Compoundshape.o
@@ -576,6 +665,105 @@ week03/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.s
 .PHONY : week03/main.cpp.s
 
+week04/TestBuilder.o: week04/TestBuilder.cpp.o
+.PHONY : week04/TestBuilder.o
+
+# target to build an object file
+week04/TestBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.o
+.PHONY : week04/TestBuilder.cpp.o
+
+week04/TestBuilder.i: week04/TestBuilder.cpp.i
+.PHONY : week04/TestBuilder.i
+
+# target to preprocess a source file
+week04/TestBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.i
+.PHONY : week04/TestBuilder.cpp.i
+
+week04/TestBuilder.s: week04/TestBuilder.cpp.s
+.PHONY : week04/TestBuilder.s
+
+# target to generate assembly for a file
+week04/TestBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.s
+.PHONY : week04/TestBuilder.cpp.s
+
+week04/TestMap.o: week04/TestMap.cpp.o
+.PHONY : week04/TestMap.o
+
+# target to build an object file
+week04/TestMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.o
+.PHONY : week04/TestMap.cpp.o
+
+week04/TestMap.i: week04/TestMap.cpp.i
+.PHONY : week04/TestMap.i
+
+# target to preprocess a source file
+week04/TestMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.i
+.PHONY : week04/TestMap.cpp.i
+
+week04/TestMap.s: week04/TestMap.cpp.s
+.PHONY : week04/TestMap.s
+
+# target to generate assembly for a file
+week04/TestMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.s
+.PHONY : week04/TestMap.cpp.s
+
+week04/TestVector.o: week04/TestVector.cpp.o
+.PHONY : week04/TestVector.o
+
+# target to build an object file
+week04/TestVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.o
+.PHONY : week04/TestVector.cpp.o
+
+week04/TestVector.i: week04/TestVector.cpp.i
+.PHONY : week04/TestVector.i
+
+# target to preprocess a source file
+week04/TestVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.i
+.PHONY : week04/TestVector.cpp.i
+
+week04/TestVector.s: week04/TestVector.cpp.s
+.PHONY : week04/TestVector.s
+
+# target to generate assembly for a file
+week04/TestVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.s
+.PHONY : week04/TestVector.cpp.s
+
+week04/main.o: week04/main.cpp.o
+.PHONY : week04/main.o
+
+# target to build an object file
+week04/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.o
+.PHONY : week04/main.cpp.o
+
+week04/main.i: week04/main.cpp.i
+.PHONY : week04/main.i
+
+# target to preprocess a source file
+week04/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.i
+.PHONY : week04/main.cpp.i
+
+week04/main.s: week04/main.cpp.s
+.PHONY : week04/main.s
+
+# target to generate assembly for a file
+week04/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.s
+.PHONY : week04/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -584,10 +772,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CppDesignPatterns"
 	@echo "... builder"
+	@echo "... cppDesignPatterns"
 	@echo "... factory"
+	@echo "... singleton"
+	@echo "... testBuilder"
+	@echo "... testMap"
+	@echo "... testVector"
 	@echo "... week03"
+	@echo "... week04"
 	@echo "... builder/Builder.o"
 	@echo "... builder/Builder.i"
 	@echo "... builder/Builder.s"
@@ -612,6 +805,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... singleton/Singleton.o"
+	@echo "... singleton/Singleton.i"
+	@echo "... singleton/Singleton.s"
 	@echo "... week03/Compoundshape.o"
 	@echo "... week03/Compoundshape.i"
 	@echo "... week03/Compoundshape.s"
@@ -639,6 +835,18 @@ help:
 	@echo "... week03/main.o"
 	@echo "... week03/main.i"
 	@echo "... week03/main.s"
+	@echo "... week04/TestBuilder.o"
+	@echo "... week04/TestBuilder.i"
+	@echo "... week04/TestBuilder.s"
+	@echo "... week04/TestMap.o"
+	@echo "... week04/TestMap.i"
+	@echo "... week04/TestMap.s"
+	@echo "... week04/TestVector.o"
+	@echo "... week04/TestVector.i"
+	@echo "... week04/TestVector.s"
+	@echo "... week04/main.o"
+	@echo "... week04/main.i"
+	@echo "... week04/main.s"
 .PHONY : help
 
 
