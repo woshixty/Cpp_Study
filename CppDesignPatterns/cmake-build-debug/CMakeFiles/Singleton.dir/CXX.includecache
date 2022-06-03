@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.cpp
+Singleton.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.h
+iostream
+-
+

@@ -63,11 +63,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/vectorT.dir/all
-all: CMakeFiles/16-1.dir/all
-all: CMakeFiles/kingT.dir/all
-all: CMakeFiles/chapter16.dir/all
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/SmartPointers.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -75,142 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/vectorT.dir/clean
-clean: CMakeFiles/16-1.dir/clean
-clean: CMakeFiles/kingT.dir/clean
-clean: CMakeFiles/chapter16.dir/clean
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/SmartPointers.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/vectorT.dir
+# Target rules for target CMakeFiles/SmartPointers.dir
 
 # All Build rule for target.
-CMakeFiles/vectorT.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target vectorT"
-.PHONY : CMakeFiles/vectorT.dir/all
+CMakeFiles/SmartPointers.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target SmartPointers"
+.PHONY : CMakeFiles/SmartPointers.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/vectorT.dir/rule: cmake_check_build_system
+CMakeFiles/SmartPointers.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vectorT.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SmartPointers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/vectorT.dir/rule
+.PHONY : CMakeFiles/SmartPointers.dir/rule
 
 # Convenience name for target.
-vectorT: CMakeFiles/vectorT.dir/rule
-.PHONY : vectorT
+SmartPointers: CMakeFiles/SmartPointers.dir/rule
+.PHONY : SmartPointers
 
 # clean rule for target.
-CMakeFiles/vectorT.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/clean
-.PHONY : CMakeFiles/vectorT.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/16-1.dir
-
-# All Build rule for target.
-CMakeFiles/16-1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target 16-1"
-.PHONY : CMakeFiles/16-1.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/16-1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/16-1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/16-1.dir/rule
-
-# Convenience name for target.
-16-1: CMakeFiles/16-1.dir/rule
-.PHONY : 16-1
-
-# clean rule for target.
-CMakeFiles/16-1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/clean
-.PHONY : CMakeFiles/16-1.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/kingT.dir
-
-# All Build rule for target.
-CMakeFiles/kingT.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target kingT"
-.PHONY : CMakeFiles/kingT.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/kingT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kingT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/kingT.dir/rule
-
-# Convenience name for target.
-kingT: CMakeFiles/kingT.dir/rule
-.PHONY : kingT
-
-# clean rule for target.
-CMakeFiles/kingT.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/clean
-.PHONY : CMakeFiles/kingT.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/chapter16.dir
-
-# All Build rule for target.
-CMakeFiles/chapter16.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target chapter16"
-.PHONY : CMakeFiles/chapter16.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/chapter16.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/chapter16.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/chapter16.dir/rule
-
-# Convenience name for target.
-chapter16: CMakeFiles/chapter16.dir/rule
-.PHONY : chapter16
-
-# clean rule for target.
-CMakeFiles/chapter16.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/clean
-.PHONY : CMakeFiles/chapter16.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/main.dir
-
-# All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/SmartPointers.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/clean
+.PHONY : CMakeFiles/SmartPointers.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

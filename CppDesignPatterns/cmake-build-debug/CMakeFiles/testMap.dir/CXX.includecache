@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/TestMap.cpp
+kMatrixMap.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h
+iostream
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrix.h
+algorithm
+-
+iostream
+-
+numeric
+-
+map
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixIterator.h
+iterator
+-
+kMatrix.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrix.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h
+kMatrix.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrix.h
+kMatrixIterator.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixIterator.h
+map
+-
+

@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="vectorT">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/vectorT" prefix_auto="0" extension_auto="0"/>
+			<Target title="SmartPointers">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/SmartPointers" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -51,14 +51,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 vectorT"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 SmartPointers"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="vectorT/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/vectorT" prefix_auto="0" extension_auto="0"/>
+			<Target title="SmartPointers/fast">
+				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/SmartPointers" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -71,202 +71,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 vectorT/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="16-1">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/16-1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 16-1"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="16-1/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/16-1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 16-1/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="kingT">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/kingT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 kingT"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="kingT/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/kingT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 kingT/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="chapter16">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/chapter16" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 chapter16"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="chapter16/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/chapter16" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 chapter16/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="main">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="main/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 SmartPointers/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter11/mytime0.cpp">
-			<Option target="16-1"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter11/mytime0.h">
-			<Option target="16-1"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter13/tabtenn0.cpp">
-			<Option target="16-1"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter13/tabtenn0.h">
-			<Option target="16-1"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter16/16-1.cpp">
-			<Option target="16-1"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/chapter16/main.cpp">
-			<Option target="chapter16"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.cpp">
-			<Option target="kingT"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.h">
-			<Option target="kingT"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/main.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/vectorT/main.cpp">
-			<Option target="vectorT"/>
+		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/SmartPointers/12-1.cpp">
+			<Option target="SmartPointers"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

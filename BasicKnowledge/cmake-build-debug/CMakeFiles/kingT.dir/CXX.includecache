@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.cpp
+test.h
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.h
+iostream
+-
+vector
+-
+algorithm
+-
+functional
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/kingsoftware/test.h
+

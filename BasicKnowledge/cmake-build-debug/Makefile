@@ -117,237 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vectorT
+# Target rules for targets named SmartPointers
 
 # Build rule for target.
-vectorT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vectorT
-.PHONY : vectorT
+SmartPointers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SmartPointers
+.PHONY : SmartPointers
 
 # fast build rule for target.
-vectorT/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/build
-.PHONY : vectorT/fast
+SmartPointers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/build
+.PHONY : SmartPointers/fast
 
-#=============================================================================
-# Target rules for targets named 16-1
-
-# Build rule for target.
-16-1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 16-1
-.PHONY : 16-1
-
-# fast build rule for target.
-16-1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/build
-.PHONY : 16-1/fast
-
-#=============================================================================
-# Target rules for targets named kingT
-
-# Build rule for target.
-kingT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kingT
-.PHONY : kingT
-
-# fast build rule for target.
-kingT/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/build
-.PHONY : kingT/fast
-
-#=============================================================================
-# Target rules for targets named chapter16
-
-# Build rule for target.
-chapter16: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter16
-.PHONY : chapter16
-
-# fast build rule for target.
-chapter16/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/build
-.PHONY : chapter16/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-chapter11/mytime0.o: chapter11/mytime0.cpp.o
-.PHONY : chapter11/mytime0.o
+SmartPointers/12-1.o: SmartPointers/12-1.cpp.o
+.PHONY : SmartPointers/12-1.o
 
 # target to build an object file
-chapter11/mytime0.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter11/mytime0.cpp.o
-.PHONY : chapter11/mytime0.cpp.o
+SmartPointers/12-1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/SmartPointers/12-1.cpp.o
+.PHONY : SmartPointers/12-1.cpp.o
 
-chapter11/mytime0.i: chapter11/mytime0.cpp.i
-.PHONY : chapter11/mytime0.i
-
-# target to preprocess a source file
-chapter11/mytime0.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter11/mytime0.cpp.i
-.PHONY : chapter11/mytime0.cpp.i
-
-chapter11/mytime0.s: chapter11/mytime0.cpp.s
-.PHONY : chapter11/mytime0.s
-
-# target to generate assembly for a file
-chapter11/mytime0.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter11/mytime0.cpp.s
-.PHONY : chapter11/mytime0.cpp.s
-
-chapter13/tabtenn0.o: chapter13/tabtenn0.cpp.o
-.PHONY : chapter13/tabtenn0.o
-
-# target to build an object file
-chapter13/tabtenn0.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.o
-.PHONY : chapter13/tabtenn0.cpp.o
-
-chapter13/tabtenn0.i: chapter13/tabtenn0.cpp.i
-.PHONY : chapter13/tabtenn0.i
+SmartPointers/12-1.i: SmartPointers/12-1.cpp.i
+.PHONY : SmartPointers/12-1.i
 
 # target to preprocess a source file
-chapter13/tabtenn0.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.i
-.PHONY : chapter13/tabtenn0.cpp.i
+SmartPointers/12-1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/SmartPointers/12-1.cpp.i
+.PHONY : SmartPointers/12-1.cpp.i
 
-chapter13/tabtenn0.s: chapter13/tabtenn0.cpp.s
-.PHONY : chapter13/tabtenn0.s
-
-# target to generate assembly for a file
-chapter13/tabtenn0.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter13/tabtenn0.cpp.s
-.PHONY : chapter13/tabtenn0.cpp.s
-
-chapter16/16-1.o: chapter16/16-1.cpp.o
-.PHONY : chapter16/16-1.o
-
-# target to build an object file
-chapter16/16-1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter16/16-1.cpp.o
-.PHONY : chapter16/16-1.cpp.o
-
-chapter16/16-1.i: chapter16/16-1.cpp.i
-.PHONY : chapter16/16-1.i
-
-# target to preprocess a source file
-chapter16/16-1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter16/16-1.cpp.i
-.PHONY : chapter16/16-1.cpp.i
-
-chapter16/16-1.s: chapter16/16-1.cpp.s
-.PHONY : chapter16/16-1.s
+SmartPointers/12-1.s: SmartPointers/12-1.cpp.s
+.PHONY : SmartPointers/12-1.s
 
 # target to generate assembly for a file
-chapter16/16-1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/16-1.dir/build.make CMakeFiles/16-1.dir/chapter16/16-1.cpp.s
-.PHONY : chapter16/16-1.cpp.s
-
-chapter16/main.o: chapter16/main.cpp.o
-.PHONY : chapter16/main.o
-
-# target to build an object file
-chapter16/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/chapter16/main.cpp.o
-.PHONY : chapter16/main.cpp.o
-
-chapter16/main.i: chapter16/main.cpp.i
-.PHONY : chapter16/main.i
-
-# target to preprocess a source file
-chapter16/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/chapter16/main.cpp.i
-.PHONY : chapter16/main.cpp.i
-
-chapter16/main.s: chapter16/main.cpp.s
-.PHONY : chapter16/main.s
-
-# target to generate assembly for a file
-chapter16/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter16.dir/build.make CMakeFiles/chapter16.dir/chapter16/main.cpp.s
-.PHONY : chapter16/main.cpp.s
-
-kingsoftware/test.o: kingsoftware/test.cpp.o
-.PHONY : kingsoftware/test.o
-
-# target to build an object file
-kingsoftware/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.o
-.PHONY : kingsoftware/test.cpp.o
-
-kingsoftware/test.i: kingsoftware/test.cpp.i
-.PHONY : kingsoftware/test.i
-
-# target to preprocess a source file
-kingsoftware/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.i
-.PHONY : kingsoftware/test.cpp.i
-
-kingsoftware/test.s: kingsoftware/test.cpp.s
-.PHONY : kingsoftware/test.s
-
-# target to generate assembly for a file
-kingsoftware/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kingT.dir/build.make CMakeFiles/kingT.dir/kingsoftware/test.cpp.s
-.PHONY : kingsoftware/test.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-vectorT/main.o: vectorT/main.cpp.o
-.PHONY : vectorT/main.o
-
-# target to build an object file
-vectorT/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.o
-.PHONY : vectorT/main.cpp.o
-
-vectorT/main.i: vectorT/main.cpp.i
-.PHONY : vectorT/main.i
-
-# target to preprocess a source file
-vectorT/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.i
-.PHONY : vectorT/main.cpp.i
-
-vectorT/main.s: vectorT/main.cpp.s
-.PHONY : vectorT/main.s
-
-# target to generate assembly for a file
-vectorT/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorT.dir/build.make CMakeFiles/vectorT.dir/vectorT/main.cpp.s
-.PHONY : vectorT/main.cpp.s
+SmartPointers/12-1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/SmartPointers/12-1.cpp.s
+.PHONY : SmartPointers/12-1.cpp.s
 
 # Help Target
 help:
@@ -357,32 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... 16-1"
-	@echo "... chapter16"
-	@echo "... kingT"
-	@echo "... main"
-	@echo "... vectorT"
-	@echo "... chapter11/mytime0.o"
-	@echo "... chapter11/mytime0.i"
-	@echo "... chapter11/mytime0.s"
-	@echo "... chapter13/tabtenn0.o"
-	@echo "... chapter13/tabtenn0.i"
-	@echo "... chapter13/tabtenn0.s"
-	@echo "... chapter16/16-1.o"
-	@echo "... chapter16/16-1.i"
-	@echo "... chapter16/16-1.s"
-	@echo "... chapter16/main.o"
-	@echo "... chapter16/main.i"
-	@echo "... chapter16/main.s"
-	@echo "... kingsoftware/test.o"
-	@echo "... kingsoftware/test.i"
-	@echo "... kingsoftware/test.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... vectorT/main.o"
-	@echo "... vectorT/main.i"
-	@echo "... vectorT/main.s"
+	@echo "... SmartPointers"
+	@echo "... SmartPointers/12-1.o"
+	@echo "... SmartPointers/12-1.i"
+	@echo "... SmartPointers/12-1.s"
 .PHONY : help
 
 
