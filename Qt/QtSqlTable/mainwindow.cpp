@@ -8,7 +8,7 @@ void MainWindow::openTable()
 {
     //打开数据表
     tabModel = new QSqlTableModel(this, DB);
-    //设置数据表
+    //设置数据表名称，不会立即读取数据，但是会提取字段信息
     tabModel->setTable("employee");
     //数据保存方式，OnManualSubmit , OnRowChange
     tabModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
@@ -20,7 +20,6 @@ void MainWindow::openTable()
         QMessageBox::critical(this, "错误信息", "打开数据表错误,错误信息\n" + tabModel->lastError().text(), QMessageBox::Ok,QMessageBox::NoButton);
         return;
     }
-
     //字段显示名
     tabModel->setHeaderData(tabModel->fieldIndex("empNo"),Qt::Horizontal,"工号");
     tabModel->setHeaderData(tabModel->fieldIndex("Name"),Qt::Horizontal,"姓名");
@@ -52,7 +51,6 @@ void MainWindow::openTable()
     ui->tableView->setColumnHidden(tabModel->fieldIndex("Memo"),true);
     //隐藏列
     ui->tableView->setColumnHidden(tabModel->fieldIndex("Photo"),true);
-
     //tableView上为“性别”和“部门”两个字段设置自定义代理组件
     QStringList strList;
     strList<<"男"<<"女";
@@ -60,14 +58,12 @@ void MainWindow::openTable()
     delegateSex.setItems(strList,isEditable);
     //Combbox选择型
     ui->tableView->setItemDelegateForColumn(tabModel->fieldIndex("Gender"),&delegateSex);
-
     strList.clear();
     strList<<"销售部"<<"技术部"<<"生产部"<<"行政部";
     isEditable=true;
     delegateDepart.setItems(strList,isEditable);
     //Combbox选择型
     ui->tableView->setItemDelegateForColumn(tabModel->fieldIndex("Department"),&delegateDepart);
-
     //创建界面组件与数据模型的字段之间的数据映射
     dataMapper= new QDataWidgetMapper();
     //设置数据模型
@@ -193,14 +189,13 @@ void MainWindow::on_currentRowChanged(const QModelIndex &current, const QModelIn
 void MainWindow::on_actOpenDB_triggered()
 {
     //打开数据表
-    QString aFile=QFileDialog::getOpenFileName(this,"选择数据库文件", "", "SQL Lite数据库(*.db *.db3)");
+    QString aFile=QFileDialog::getOpenFileName(this, "选择数据库文件", "", "SQL Lite数据库(*.db *.db3)");
     //选择SQL Lite数据库文件
     if (aFile.isEmpty())
         return;
-
     //打开数据库
     //添加 SQL LITE数据库驱动
-    DB=QSqlDatabase::addDatabase("QSQLITE");
+    DB = QSqlDatabase::addDatabase("QSQLITE");
     //设置数据库名称
     DB.setDatabaseName(aFile);
     //DB.setHostName();

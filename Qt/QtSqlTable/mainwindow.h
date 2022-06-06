@@ -19,7 +19,7 @@ class MainWindow : public QMainWindow
 
 private:
     //数据库连接
-    QSqlDatabase  DB;
+    QSqlDatabase DB;
 
     //数据模型
     QSqlTableModel *tabModel;
