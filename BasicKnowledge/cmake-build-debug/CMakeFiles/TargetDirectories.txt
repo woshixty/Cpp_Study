@@ -1,3 +1,4 @@
 /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles/exceptions.dir
 /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles/SmartPointers.dir

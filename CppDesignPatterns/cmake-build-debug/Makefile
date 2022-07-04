@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-bu
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,45 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testBuilder
-
-# Build rule for target.
-testBuilder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testBuilder
-.PHONY : testBuilder
-
-# fast build rule for target.
-testBuilder/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/build
-.PHONY : testBuilder/fast
-
-#=============================================================================
-# Target rules for targets named testMap
-
-# Build rule for target.
-testMap: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testMap
-.PHONY : testMap
-
-# fast build rule for target.
-testMap/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/build
-.PHONY : testMap/fast
-
-#=============================================================================
-# Target rules for targets named testVector
-
-# Build rule for target.
-testVector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testVector
-.PHONY : testVector
-
-# fast build rule for target.
-testVector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/build
-.PHONY : testVector/fast
-
-#=============================================================================
 # Target rules for targets named singleton
 
 # Build rule for target.
@@ -167,19 +128,6 @@ singleton: cmake_check_build_system
 singleton/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/build
 .PHONY : singleton/fast
-
-#=============================================================================
-# Target rules for targets named week03
-
-# Build rule for target.
-week03: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week03
-.PHONY : week03
-
-# fast build rule for target.
-week03/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/build
-.PHONY : week03/fast
 
 #=============================================================================
 # Target rules for targets named builder
@@ -206,19 +154,6 @@ factory: cmake_check_build_system
 factory/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/factory.dir/build.make CMakeFiles/factory.dir/build
 .PHONY : factory/fast
-
-#=============================================================================
-# Target rules for targets named week04
-
-# Build rule for target.
-week04: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week04
-.PHONY : week04
-
-# fast build rule for target.
-week04/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/build
-.PHONY : week04/fast
 
 #=============================================================================
 # Target rules for targets named cppDesignPatterns
@@ -449,321 +384,6 @@ singleton/Singleton.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/singleton.dir/build.make CMakeFiles/singleton.dir/singleton/Singleton.cpp.s
 .PHONY : singleton/Singleton.cpp.s
 
-week03/Compoundshape.o: week03/Compoundshape.cpp.o
-.PHONY : week03/Compoundshape.o
-
-# target to build an object file
-week03/Compoundshape.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Compoundshape.cpp.o
-.PHONY : week03/Compoundshape.cpp.o
-
-week03/Compoundshape.i: week03/Compoundshape.cpp.i
-.PHONY : week03/Compoundshape.i
-
-# target to preprocess a source file
-week03/Compoundshape.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Compoundshape.cpp.i
-.PHONY : week03/Compoundshape.cpp.i
-
-week03/Compoundshape.s: week03/Compoundshape.cpp.s
-.PHONY : week03/Compoundshape.s
-
-# target to generate assembly for a file
-week03/Compoundshape.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Compoundshape.cpp.s
-.PHONY : week03/Compoundshape.cpp.s
-
-week03/CompoundshapeBuilder.o: week03/CompoundshapeBuilder.cpp.o
-.PHONY : week03/CompoundshapeBuilder.o
-
-# target to build an object file
-week03/CompoundshapeBuilder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.o
-.PHONY : week03/CompoundshapeBuilder.cpp.o
-
-week03/CompoundshapeBuilder.i: week03/CompoundshapeBuilder.cpp.i
-.PHONY : week03/CompoundshapeBuilder.i
-
-# target to preprocess a source file
-week03/CompoundshapeBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.i
-.PHONY : week03/CompoundshapeBuilder.cpp.i
-
-week03/CompoundshapeBuilder.s: week03/CompoundshapeBuilder.cpp.s
-.PHONY : week03/CompoundshapeBuilder.s
-
-# target to generate assembly for a file
-week03/CompoundshapeBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/CompoundshapeBuilder.cpp.s
-.PHONY : week03/CompoundshapeBuilder.cpp.s
-
-week03/Rectangle.o: week03/Rectangle.cpp.o
-.PHONY : week03/Rectangle.o
-
-# target to build an object file
-week03/Rectangle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Rectangle.cpp.o
-.PHONY : week03/Rectangle.cpp.o
-
-week03/Rectangle.i: week03/Rectangle.cpp.i
-.PHONY : week03/Rectangle.i
-
-# target to preprocess a source file
-week03/Rectangle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Rectangle.cpp.i
-.PHONY : week03/Rectangle.cpp.i
-
-week03/Rectangle.s: week03/Rectangle.cpp.s
-.PHONY : week03/Rectangle.s
-
-# target to generate assembly for a file
-week03/Rectangle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Rectangle.cpp.s
-.PHONY : week03/Rectangle.cpp.s
-
-week03/Round.o: week03/Round.cpp.o
-.PHONY : week03/Round.o
-
-# target to build an object file
-week03/Round.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Round.cpp.o
-.PHONY : week03/Round.cpp.o
-
-week03/Round.i: week03/Round.cpp.i
-.PHONY : week03/Round.i
-
-# target to preprocess a source file
-week03/Round.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Round.cpp.i
-.PHONY : week03/Round.cpp.i
-
-week03/Round.s: week03/Round.cpp.s
-.PHONY : week03/Round.s
-
-# target to generate assembly for a file
-week03/Round.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Round.cpp.s
-.PHONY : week03/Round.cpp.s
-
-week03/ShapeFactory.o: week03/ShapeFactory.cpp.o
-.PHONY : week03/ShapeFactory.o
-
-# target to build an object file
-week03/ShapeFactory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.o
-.PHONY : week03/ShapeFactory.cpp.o
-
-week03/ShapeFactory.i: week03/ShapeFactory.cpp.i
-.PHONY : week03/ShapeFactory.i
-
-# target to preprocess a source file
-week03/ShapeFactory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.i
-.PHONY : week03/ShapeFactory.cpp.i
-
-week03/ShapeFactory.s: week03/ShapeFactory.cpp.s
-.PHONY : week03/ShapeFactory.s
-
-# target to generate assembly for a file
-week03/ShapeFactory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/ShapeFactory.cpp.s
-.PHONY : week03/ShapeFactory.cpp.s
-
-week03/Square.o: week03/Square.cpp.o
-.PHONY : week03/Square.o
-
-# target to build an object file
-week03/Square.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Square.cpp.o
-.PHONY : week03/Square.cpp.o
-
-week03/Square.i: week03/Square.cpp.i
-.PHONY : week03/Square.i
-
-# target to preprocess a source file
-week03/Square.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Square.cpp.i
-.PHONY : week03/Square.cpp.i
-
-week03/Square.s: week03/Square.cpp.s
-.PHONY : week03/Square.s
-
-# target to generate assembly for a file
-week03/Square.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Square.cpp.s
-.PHONY : week03/Square.cpp.s
-
-week03/Trapezium.o: week03/Trapezium.cpp.o
-.PHONY : week03/Trapezium.o
-
-# target to build an object file
-week03/Trapezium.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Trapezium.cpp.o
-.PHONY : week03/Trapezium.cpp.o
-
-week03/Trapezium.i: week03/Trapezium.cpp.i
-.PHONY : week03/Trapezium.i
-
-# target to preprocess a source file
-week03/Trapezium.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Trapezium.cpp.i
-.PHONY : week03/Trapezium.cpp.i
-
-week03/Trapezium.s: week03/Trapezium.cpp.s
-.PHONY : week03/Trapezium.s
-
-# target to generate assembly for a file
-week03/Trapezium.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Trapezium.cpp.s
-.PHONY : week03/Trapezium.cpp.s
-
-week03/Triangle.o: week03/Triangle.cpp.o
-.PHONY : week03/Triangle.o
-
-# target to build an object file
-week03/Triangle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Triangle.cpp.o
-.PHONY : week03/Triangle.cpp.o
-
-week03/Triangle.i: week03/Triangle.cpp.i
-.PHONY : week03/Triangle.i
-
-# target to preprocess a source file
-week03/Triangle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Triangle.cpp.i
-.PHONY : week03/Triangle.cpp.i
-
-week03/Triangle.s: week03/Triangle.cpp.s
-.PHONY : week03/Triangle.s
-
-# target to generate assembly for a file
-week03/Triangle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/Triangle.cpp.s
-.PHONY : week03/Triangle.cpp.s
-
-week03/main.o: week03/main.cpp.o
-.PHONY : week03/main.o
-
-# target to build an object file
-week03/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.o
-.PHONY : week03/main.cpp.o
-
-week03/main.i: week03/main.cpp.i
-.PHONY : week03/main.i
-
-# target to preprocess a source file
-week03/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.i
-.PHONY : week03/main.cpp.i
-
-week03/main.s: week03/main.cpp.s
-.PHONY : week03/main.s
-
-# target to generate assembly for a file
-week03/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week03.dir/build.make CMakeFiles/week03.dir/week03/main.cpp.s
-.PHONY : week03/main.cpp.s
-
-week04/TestBuilder.o: week04/TestBuilder.cpp.o
-.PHONY : week04/TestBuilder.o
-
-# target to build an object file
-week04/TestBuilder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.o
-.PHONY : week04/TestBuilder.cpp.o
-
-week04/TestBuilder.i: week04/TestBuilder.cpp.i
-.PHONY : week04/TestBuilder.i
-
-# target to preprocess a source file
-week04/TestBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.i
-.PHONY : week04/TestBuilder.cpp.i
-
-week04/TestBuilder.s: week04/TestBuilder.cpp.s
-.PHONY : week04/TestBuilder.s
-
-# target to generate assembly for a file
-week04/TestBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testBuilder.dir/build.make CMakeFiles/testBuilder.dir/week04/TestBuilder.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/TestBuilder.cpp.s
-.PHONY : week04/TestBuilder.cpp.s
-
-week04/TestMap.o: week04/TestMap.cpp.o
-.PHONY : week04/TestMap.o
-
-# target to build an object file
-week04/TestMap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.o
-.PHONY : week04/TestMap.cpp.o
-
-week04/TestMap.i: week04/TestMap.cpp.i
-.PHONY : week04/TestMap.i
-
-# target to preprocess a source file
-week04/TestMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.i
-.PHONY : week04/TestMap.cpp.i
-
-week04/TestMap.s: week04/TestMap.cpp.s
-.PHONY : week04/TestMap.s
-
-# target to generate assembly for a file
-week04/TestMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testMap.dir/build.make CMakeFiles/testMap.dir/week04/TestMap.cpp.s
-.PHONY : week04/TestMap.cpp.s
-
-week04/TestVector.o: week04/TestVector.cpp.o
-.PHONY : week04/TestVector.o
-
-# target to build an object file
-week04/TestVector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.o
-.PHONY : week04/TestVector.cpp.o
-
-week04/TestVector.i: week04/TestVector.cpp.i
-.PHONY : week04/TestVector.i
-
-# target to preprocess a source file
-week04/TestVector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.i
-.PHONY : week04/TestVector.cpp.i
-
-week04/TestVector.s: week04/TestVector.cpp.s
-.PHONY : week04/TestVector.s
-
-# target to generate assembly for a file
-week04/TestVector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testVector.dir/build.make CMakeFiles/testVector.dir/week04/TestVector.cpp.s
-.PHONY : week04/TestVector.cpp.s
-
-week04/main.o: week04/main.cpp.o
-.PHONY : week04/main.o
-
-# target to build an object file
-week04/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.o
-.PHONY : week04/main.cpp.o
-
-week04/main.i: week04/main.cpp.i
-.PHONY : week04/main.i
-
-# target to preprocess a source file
-week04/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.i
-.PHONY : week04/main.cpp.i
-
-week04/main.s: week04/main.cpp.s
-.PHONY : week04/main.s
-
-# target to generate assembly for a file
-week04/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/week04.dir/build.make CMakeFiles/week04.dir/week04/main.cpp.s
-.PHONY : week04/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -776,11 +396,6 @@ help:
 	@echo "... cppDesignPatterns"
 	@echo "... factory"
 	@echo "... singleton"
-	@echo "... testBuilder"
-	@echo "... testMap"
-	@echo "... testVector"
-	@echo "... week03"
-	@echo "... week04"
 	@echo "... builder/Builder.o"
 	@echo "... builder/Builder.i"
 	@echo "... builder/Builder.s"
@@ -808,45 +423,6 @@ help:
 	@echo "... singleton/Singleton.o"
 	@echo "... singleton/Singleton.i"
 	@echo "... singleton/Singleton.s"
-	@echo "... week03/Compoundshape.o"
-	@echo "... week03/Compoundshape.i"
-	@echo "... week03/Compoundshape.s"
-	@echo "... week03/CompoundshapeBuilder.o"
-	@echo "... week03/CompoundshapeBuilder.i"
-	@echo "... week03/CompoundshapeBuilder.s"
-	@echo "... week03/Rectangle.o"
-	@echo "... week03/Rectangle.i"
-	@echo "... week03/Rectangle.s"
-	@echo "... week03/Round.o"
-	@echo "... week03/Round.i"
-	@echo "... week03/Round.s"
-	@echo "... week03/ShapeFactory.o"
-	@echo "... week03/ShapeFactory.i"
-	@echo "... week03/ShapeFactory.s"
-	@echo "... week03/Square.o"
-	@echo "... week03/Square.i"
-	@echo "... week03/Square.s"
-	@echo "... week03/Trapezium.o"
-	@echo "... week03/Trapezium.i"
-	@echo "... week03/Trapezium.s"
-	@echo "... week03/Triangle.o"
-	@echo "... week03/Triangle.i"
-	@echo "... week03/Triangle.s"
-	@echo "... week03/main.o"
-	@echo "... week03/main.i"
-	@echo "... week03/main.s"
-	@echo "... week04/TestBuilder.o"
-	@echo "... week04/TestBuilder.i"
-	@echo "... week04/TestBuilder.s"
-	@echo "... week04/TestMap.o"
-	@echo "... week04/TestMap.i"
-	@echo "... week04/TestMap.s"
-	@echo "... week04/TestVector.o"
-	@echo "... week04/TestVector.i"
-	@echo "... week04/TestVector.s"
-	@echo "... week04/main.o"
-	@echo "... week04/main.i"
-	@echo "... week04/main.s"
 .PHONY : help
 
 

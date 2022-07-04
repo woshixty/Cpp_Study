@@ -50,5 +50,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/exceptions.dir/DependInfo.cmake"
   "CMakeFiles/SmartPointers.dir/DependInfo.cmake"
   )

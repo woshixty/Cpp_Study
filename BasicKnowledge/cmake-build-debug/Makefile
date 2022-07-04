@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named exceptions
+
+# Build rule for target.
+exceptions: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exceptions
+.PHONY : exceptions
+
+# fast build rule for target.
+exceptions/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/build
+.PHONY : exceptions/fast
+
+#=============================================================================
 # Target rules for targets named SmartPointers
 
 # Build rule for target.
@@ -128,6 +141,30 @@ SmartPointers: cmake_check_build_system
 SmartPointers/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SmartPointers.dir/build.make CMakeFiles/SmartPointers.dir/build
 .PHONY : SmartPointers/fast
+
+Exceptions/main.o: Exceptions/main.cpp.o
+.PHONY : Exceptions/main.o
+
+# target to build an object file
+Exceptions/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/Exceptions/main.cpp.o
+.PHONY : Exceptions/main.cpp.o
+
+Exceptions/main.i: Exceptions/main.cpp.i
+.PHONY : Exceptions/main.i
+
+# target to preprocess a source file
+Exceptions/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/Exceptions/main.cpp.i
+.PHONY : Exceptions/main.cpp.i
+
+Exceptions/main.s: Exceptions/main.cpp.s
+.PHONY : Exceptions/main.s
+
+# target to generate assembly for a file
+Exceptions/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/Exceptions/main.cpp.s
+.PHONY : Exceptions/main.cpp.s
 
 SmartPointers/12-1.o: SmartPointers/12-1.cpp.o
 .PHONY : SmartPointers/12-1.o
@@ -162,6 +199,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SmartPointers"
+	@echo "... exceptions"
+	@echo "... Exceptions/main.o"
+	@echo "... Exceptions/main.i"
+	@echo "... Exceptions/main.s"
 	@echo "... SmartPointers/12-1.o"
 	@echo "... SmartPointers/12-1.i"
 	@echo "... SmartPointers/12-1.s"

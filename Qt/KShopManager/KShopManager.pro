@@ -4,9 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-QT       += core sql
-QT       += core testlib
+QT       += core gui sql testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,27 +24,46 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        dao/kproductdao.cpp \
-        dialog/kdialogin.cpp \
-        kproductentity.cpp \
-        kuserdao.cpp \
-        kuserservice.cpp \
+    delegate/kcategorydelegate.cpp \
         main.cpp \
         mainwindow.cpp \
-        test/kuserdaotest.cpp
+    dao/kproductdao.cpp \
+    test/ksingletontest.cpp \
+    utils/ksingleton.cpp \
+    utils/ksnowflake.cpp \
+    windows/kenterpagewindow.cpp \
+    windows/kloginwindow.cpp \
+    test/kuserdaotest.cpp \
+    windows/kproductmanagerwindow.cpp \
+    service/kuserservice.cpp \
+    dao/kuserdao.cpp \
+    service/kproductservice.cpp \
+    test/kproductdaotest.cpp \
+    windows/kproductsellwindows.cpp
 
 HEADERS += \
-        dao/kproductdao.h \
-        dialog/kdialogin.h \
-        kconstant.h \
-        kproductentity.h \
-        kuserdao.h \
-        kuserentity.h \
-        kuserservice.h \
+    delegate/kcategorydelegate.h \
         mainwindow.h \
-        test/kuserdaotest.h \
-        tool/ktoolmethod.h
+    test/ksingletontest.h \
+    utils/kconstants.h \
+    entity/kproductentity.h \
+    dao/kproductdao.h \
+    utils/ksingleton.h \
+    utils/ksnowflake.h \
+    windows/kenterpagewindow.h \
+    windows/kloginwindow.h \
+    test/kuserdaotest.h \
+    windows/kproductmanagerwindow.h \
+    service/kuserservice.h \
+    dao/kuserdao.h \
+    entity/kuserentity.h \
+    service/kproductservice.h \
+    test/kproductdaotest.h \
+    windows/kproductsellwindows.h
 
 FORMS += \
-        dialog/kdialogin.ui \
-        mainwindow.ui
+        mainwindow.ui \
+    windows/kenterpagewindow.ui \
+    windows/kloginwindow.ui \
+    windows/kproductmanagerwindow.ui \
+    windows/kproductsellwindows.ui

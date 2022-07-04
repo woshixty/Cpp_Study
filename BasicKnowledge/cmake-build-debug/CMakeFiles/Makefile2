@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/exceptions.dir/all
 all: CMakeFiles/SmartPointers.dir/all
 .PHONY : all
 
@@ -71,8 +72,35 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/exceptions.dir/clean
 clean: CMakeFiles/SmartPointers.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/exceptions.dir
+
+# All Build rule for target.
+CMakeFiles/exceptions.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target exceptions"
+.PHONY : CMakeFiles/exceptions.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/exceptions.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/exceptions.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xietingyu/Desktop/Cpp_Study/BasicKnowledge/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/exceptions.dir/rule
+
+# Convenience name for target.
+exceptions: CMakeFiles/exceptions.dir/rule
+.PHONY : exceptions
+
+# clean rule for target.
+CMakeFiles/exceptions.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exceptions.dir/build.make CMakeFiles/exceptions.dir/clean
+.PHONY : CMakeFiles/exceptions.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/SmartPointers.dir

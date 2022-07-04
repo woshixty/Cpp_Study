@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KEmployeeInformation</class>
+ <widget class="QWidget" name="KEmployeeInformation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="pages">
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="KEmployeeRegistration" name="user_register">
+      <attribute name="title">
+       <string>员工信息注册</string>
+      </attribute>
+     </widget>
+     <widget class="KEmployeeUpdate" name="info_update">
+      <attribute name="title">
+       <string>员工信息修改</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KEmployeeRegistration</class>
+   <extends>QWidget</extends>
+   <header location="global">view/innerpage/kemployeeregistration.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KEmployeeUpdate</class>
+   <extends>QWidget</extends>
+   <header location="global">view/innerpage/kemployeeupdate.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

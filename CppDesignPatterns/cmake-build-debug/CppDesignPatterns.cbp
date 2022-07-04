@@ -17,56 +17,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testBuilder">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testBuilder" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testBuilder"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testBuilder/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testBuilder" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testBuilder/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
 				<Option type="4"/>
@@ -77,81 +27,11 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="testMap">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testMap" prefix_auto="0" extension_auto="0"/>
+			<Target title="edit_cache">
 				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testMap"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testMap/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testMap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testMap/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testVector">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testVector" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testVector"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="testVector/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/testVector" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 testVector/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -192,46 +72,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 singleton/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="week03">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/week03" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 week03"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="week03/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/week03" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 week03/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -312,46 +152,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 factory/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="week04">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/week04" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 week04"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="week04/fast">
-				<Option output="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/week04" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 week04/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -442,100 +242,6 @@
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/singleton/Singleton.h">
 			<Option target="singleton"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Compoundshape.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Compoundshape.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/CompoundshapeBuilder.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/CompoundshapeBuilder.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Rectangle.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Rectangle.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Round.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Round.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Shape.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/ShapeFactory.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/ShapeFactory.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Square.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Square.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Trapezium.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Trapezium.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Triangle.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/Triangle.h">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week03/main.cpp">
-			<Option target="week03"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/TestBuilder.cpp">
-			<Option target="testBuilder"/>
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/TestMap.cpp">
-			<Option target="testMap"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/TestVector.cpp">
-			<Option target="testVector"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kIterator.h">
-			<Option target="testMap"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrix.h">
-			<Option target="testBuilder"/>
-			<Option target="testVector"/>
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixBuilder.h">
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixIterator.h">
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h">
-			<Option target="testBuilder"/>
-			<Option target="testVector"/>
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixVector.h">
-			<Option target="testBuilder"/>
-			<Option target="testVector"/>
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixVectorSource.h">
-			<Option target="week04"/>
-		</Unit>
-		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/main.cpp">
-			<Option target="week04"/>
 		</Unit>
 		<Unit filename="/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

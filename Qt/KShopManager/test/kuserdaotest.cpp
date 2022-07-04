@@ -1,7 +1,12 @@
-#include "kuserdaotest.h"
+#include "test/kuserdaotest.h"
 
-void UserDaoTest::case1_update_or_insert()
+void KUserDaoTest::case1_update_or_insert()
 {
-    int i = 1;
-    QVERIFY(i == 1);
+//    KUserDAO *userDao = KSingleton::instanceOfUserDao();
+    KUserDAO *userDao = new KUserDAO();
+    QMap<QString, QString> user;
+    user.insert("username", "hhh");
+    user.insert("password", "ooo");
+    bool res = userDao->insertOUpdateUser(user, INSERT);
+    QVERIFY(res);
 }

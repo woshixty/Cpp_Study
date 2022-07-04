@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KInformationRegistration</class>
+ <widget class="QWidget" name="KInformationRegistration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>636</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="KRoomCheckIn" name="m_check_in">
+      <attribute name="title">
+       <string>登记入住</string>
+      </attribute>
+     </widget>
+     <widget class="KRoomCheckOut" name="m_check_out">
+      <attribute name="title">
+       <string>退房操作</string>
+      </attribute>
+     </widget>
+     <widget class="KGuestInfoCheck" name="m_check_search">
+      <attribute name="title">
+       <string>综合查询</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KRoomCheckIn</class>
+   <extends>QWidget</extends>
+   <header location="global">view/innerpage/kroomcheckin.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KRoomCheckOut</class>
+   <extends>QWidget</extends>
+   <header location="global">view/innerpage/kroomcheckout.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KGuestInfoCheck</class>
+   <extends>QWidget</extends>
+   <header location="global">view/innerpage/kguestinfocheck.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
