@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>890</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="side_and_stackwidgte" stretch="1,6">
+      <item>
+       <widget class="QTreeWidget" name="m_sider">
+        <column>
+         <property name="text">
+          <string>商城管理</string>
+         </property>
+        </column>
+        <item>
+         <property name="text">
+          <string>商品</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>出售管理</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>商品管理</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>人员</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>用户列表</string>
+          </property>
+         </item>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="m_stacked_function">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="product_insert">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="product_manage">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="table_and_info" stretch="7,3">
+            <item>
+             <widget class="QTableView" name="m_table_product"/>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <layout class="QFormLayout" name="product_info">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_2">
+                  <property name="text">
+                   <string>类别</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="m_product_category">
+                  <item>
+                   <property name="text">
+                    <string>其他</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>电脑办公</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>智能手机</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>食物饮料</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>服装鞋靴</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_3">
+                  <property name="text">
+                   <string>名称</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="m_product_name"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_4">
+                  <property name="text">
+                   <string>数量</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSpinBox" name="m_product_number">
+                  <property name="maximum">
+                   <number>10000000</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>进价</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>售价</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_7">
+                  <property name="text">
+                   <string>样图</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QDoubleSpinBox" name="m_product_purchase_price">
+                  <property name="prefix">
+                   <string>¥</string>
+                  </property>
+                  <property name="maximum">
+                   <double>9999999999.989999771118164</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QDoubleSpinBox" name="m_product_selling_price">
+                  <property name="prefix">
+                   <string>¥</string>
+                  </property>
+                  <property name="maximum">
+                   <double>9999999999.989999771118164</double>
+                  </property>
+                  <property name="singleStep">
+                   <double>0.100000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="m_insert_product_btn">
+                <property name="text">
+                 <string>添加商品</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="m_delete_product_btn">
+                <property name="text">
+                 <string>删除商品</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QPushButton" name="m_save_product_btn">
+                  <property name="text">
+                   <string>保存</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="m_clear_product_btn">
+                  <property name="text">
+                   <string>清仓</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

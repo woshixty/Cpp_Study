@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Builder.h
+string
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Director.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Product.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/main.cpp
+Builder.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Builder.h
+Product.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Product.h
+Director.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/builder/Director.h
+

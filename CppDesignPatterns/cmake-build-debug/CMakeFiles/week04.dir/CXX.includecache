@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/KMatrixVector.cpp
+KMatrixVector.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/KMatrixVector.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/KMatrixVector.h
+kMatrixRecord.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixRecord.h
+kMatrixMap.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.cpp
+kMatrixMap.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixMap.h
+kMatrixRecord.h
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixRecord.h
+map
+-
+
+/Users/xietingyu/Desktop/Cpp_Study/CppDesignPatterns/week04/kMatrixRecord.h
+iostream
+-
+memory
+-
+

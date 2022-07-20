@@ -5,6 +5,8 @@ Release/
 x64
 .vs
 *.exe
+# 忽略名称中末尾为ignore的文件夹
+*Debug/
 
 # !是不忽略的意思
 !*.sln 
